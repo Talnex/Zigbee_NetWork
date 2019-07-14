@@ -169,8 +169,10 @@ byte MT_UartCalcFCS(uint8 lastResult, uint8 *msg_ptr, uint8 len )
 
   return ( xorResult );
 }
+//自定义的串口接收回调函数
 void MT_UartProcessZToolData1 ( uint8 port, uint8 event )
 {
+
   uint8 flag = 0,i,j = 0;  //flag判断有没有数据，j记录数据长度
   uint8 buf[128];         //缓冲128
   (void)event;

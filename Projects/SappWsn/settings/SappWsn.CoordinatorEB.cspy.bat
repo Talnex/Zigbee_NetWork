@@ -25,7 +25,7 @@ if not "%~1" == "" goto debugFile
 
 @echo on 
 
-"C:\Program Files\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "D:\课设勿动\ZStack-CC2530-r200\Projects\SappWsn\settings\SappWsn.CoordinatorEB.general.xcl" --backend -f "D:\课设勿动\ZStack-CC2530-r200\Projects\SappWsn\settings\SappWsn.CoordinatorEB.driver.xcl" 
+"C:\Program Files\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Projects\SappWsn\settings\SappWsn.CoordinatorEB.general.xcl" --backend -f "D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Projects\SappWsn\settings\SappWsn.CoordinatorEB.driver.xcl" 
 
 @echo off 
 goto end 
@@ -34,7 +34,7 @@ goto end
 
 @echo on 
 
-"C:\Program Files\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "D:\课设勿动\ZStack-CC2530-r200\Projects\SappWsn\settings\SappWsn.CoordinatorEB.general.xcl" "--debug_file=%~1" --backend -f "D:\课设勿动\ZStack-CC2530-r200\Projects\SappWsn\settings\SappWsn.CoordinatorEB.driver.xcl" 
+"C:\Program Files\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Projects\SappWsn\settings\SappWsn.CoordinatorEB.general.xcl" "--debug_file=%~1" --backend -f "D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Projects\SappWsn\settings\SappWsn.CoordinatorEB.driver.xcl" 
 
 @echo off 
 :end

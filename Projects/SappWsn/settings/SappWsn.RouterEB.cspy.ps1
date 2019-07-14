@@ -23,9 +23,9 @@
 
 if ($debugfile -eq "")
 {
-& "C:\Program Files\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "D:\课设勿动\ZStack-CC2530-r200\Projects\SappWsn\settings\SappWsn.RouterEB.general.xcl" --backend -f "D:\课设勿动\ZStack-CC2530-r200\Projects\SappWsn\settings\SappWsn.RouterEB.driver.xcl" 
+& "C:\Program Files\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Projects\SappWsn\settings\SappWsn.RouterEB.general.xcl" --backend -f "D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Projects\SappWsn\settings\SappWsn.RouterEB.driver.xcl" 
 }
 else
 {
-& "C:\Program Files\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "D:\课设勿动\ZStack-CC2530-r200\Projects\SappWsn\settings\SappWsn.RouterEB.general.xcl" --debug_file=$debugfile --backend -f "D:\课设勿动\ZStack-CC2530-r200\Projects\SappWsn\settings\SappWsn.RouterEB.driver.xcl" 
+& "C:\Program Files\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Projects\SappWsn\settings\SappWsn.RouterEB.general.xcl" --debug_file=$debugfile --backend -f "D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Projects\SappWsn\settings\SappWsn.RouterEB.driver.xcl" 
 }

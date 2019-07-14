@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 //
-// IAR C/C++ Compiler V10.20.1.5333 for 8051              14/Jul/2019  17:30:13
+// IAR C/C++ Compiler V10.20.1.5333 for 8051              14/Jul/2019  19:53:28
 // Copyright 2004-2018 IAR Systems AB.
 // PC-locked license - IAR Embedded Workbench for 8051
 //
@@ -12,28 +12,25 @@
 //    Dptr setup         =  1,16
 //                          
 //    Source file        =  
-//        C:\Users\Administrator\Desktop\111 -
-//        副本\ZStack-CC2530-r200\Projects\SappWsn\Source\SAPP_FrameWork.c
+//        D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Projects\SappWsn\Source\SAPP_FrameWork.c
 //    Command line       =  
-//        -f C:\Users\ADMINI~1\AppData\Local\Temp\EWAC51.tmp
-//        ("C:\Users\Administrator\Desktop\111 -
-//        副本\ZStack-CC2530-r200\Projects\SappWsn\Source\SAPP_FrameWork.c" -D
-//        ZTOOL_P1 -D MT_TASK -D MT_SYS_FUNC -D MT_ZDO_FUNC -D
+//        -f C:\Users\ADMINI~1\AppData\Local\Temp\EWCE91.tmp
+//        (D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Projects\SappWsn\Source\SAPP_FrameWork.c
+//        -D ZTOOL_P1 -D MT_TASK -D MT_SYS_FUNC -D MT_ZDO_FUNC -D
 //        LCD_SUPPORTED=DEBUG -D SAPP_ZSTACK -lC
-//        "C:\Users\Administrator\Desktop\111 -
-//        副本\ZStack-CC2530-r200\Projects\SappWsn\RouterEB\List" -lA
-//        "C:\Users\Administrator\Desktop\111 -
-//        副本\ZStack-CC2530-r200\Projects\SappWsn\RouterEB\List"
-//        --diag_suppress Pe001,Pa010 -o "C:\Users\Administrator\Desktop\111 -
-//        副本\ZStack-CC2530-r200\Projects\SappWsn\RouterEB\Obj" -e --debug
-//        --core=plain --dptr=16,1 --data_model=large --code_model=banked
-//        --calling_convention=xdata_reentrant --place_constants=data_rom
-//        --nr_virtual_regs 8 -f "C:\Users\Administrator\Desktop\111 -
-//        副本\ZStack-CC2530-r200\Projects\SappWsn\..\zstack\Tools\CC2530DB\f8wRouter.cfg"
+//        D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Projects\SappWsn\RouterEB\List
+//        -lA
+//        D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Projects\SappWsn\RouterEB\List
+//        --diag_suppress Pe001,Pa010 -o
+//        D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Projects\SappWsn\RouterEB\Obj
+//        -e --debug --core=plain --dptr=16,1 --data_model=large
+//        --code_model=banked --calling_convention=xdata_reentrant
+//        --place_constants=data_rom --nr_virtual_regs 8 -f
+//        D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Projects\SappWsn\..\zstack\Tools\CC2530DB\f8wRouter.cfg
 //        (-DCPU32MHZ -DROOT=__near_func -DMAC_CFG_APP_PENDING_QUEUE=TRUE
 //        -DMAC_CFG_TX_DATA_MAX=5 -DMAC_CFG_TX_MAX=8 -DMAC_CFG_RX_MAX=5
-//        -DRTR_NWK) -f "C:\Users\Administrator\Desktop\111 -
-//        副本\ZStack-CC2530-r200\Projects\SappWsn\..\zstack\Tools\CC2530DB\f8wConfig.cfg"
+//        -DRTR_NWK) -f
+//        D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Projects\SappWsn\..\zstack\Tools\CC2530DB\f8wConfig.cfg
 //        (-DZIGBEEPRO -DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR
 //        -DDEFAULT_CHANLIST=0x00000800 -DZDAPP_CONFIG_PAN_ID=0x4545
 //        -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MASK=0x007F
@@ -48,53 +45,51 @@
 //        0x0D}" -DMAC_MAX_FRAME_SIZE=116 -DZDNWKMGR_MIN_TRANSMISSIONS=20
 //        "-DCONST=const __code" -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE
 //        -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100
-//        -DREJOIN_POLL_RATE=440) -I "C:\Users\Administrator\Desktop\111 -
-//        副本\ZStack-CC2530-r200\Projects\SappWsn\" -I
-//        "C:\Users\Administrator\Desktop\111 -
-//        副本\ZStack-CC2530-r200\Projects\SappWsn\Source\" -I
-//        "C:\Users\Administrator\Desktop\111 -
-//        副本\ZStack-CC2530-r200\Projects\SappWsn\..\zstack\ZMain\TI2530DB\"
-//        -I "C:\Users\Administrator\Desktop\111 -
-//        副本\ZStack-CC2530-r200\Projects\SappWsn\..\..\Components\hal\include\"
-//        -I "C:\Users\Administrator\Desktop\111 -
-//        副本\ZStack-CC2530-r200\Projects\SappWsn\..\..\Components\hal\target\CC2530EB\"
-//        -I "C:\Users\Administrator\Desktop\111 -
-//        副本\ZStack-CC2530-r200\Projects\SappWsn\..\..\Components\mac\include\"
-//        -I "C:\Users\Administrator\Desktop\111 -
-//        副本\ZStack-CC2530-r200\Projects\SappWsn\..\..\Components\mac\high_level\"
-//        -I "C:\Users\Administrator\Desktop\111 -
-//        副本\ZStack-CC2530-r200\Projects\SappWsn\..\..\Components\mac\low_level\srf04\"
-//        -I "C:\Users\Administrator\Desktop\111 -
-//        副本\ZStack-CC2530-r200\Projects\SappWsn\..\..\Components\mac\low_level\srf04\single_chip\"
-//        -I "C:\Users\Administrator\Desktop\111 -
-//        副本\ZStack-CC2530-r200\Projects\SappWsn\..\..\Components\mt\" -I
-//        "C:\Users\Administrator\Desktop\111 -
-//        副本\ZStack-CC2530-r200\Projects\SappWsn\..\..\Components\osal\include\"
-//        -I "C:\Users\Administrator\Desktop\111 -
-//        副本\ZStack-CC2530-r200\Projects\SappWsn\..\..\Components\services\saddr\"
-//        -I "C:\Users\Administrator\Desktop\111 -
-//        副本\ZStack-CC2530-r200\Projects\SappWsn\..\..\Components\services\sdata\"
-//        -I "C:\Users\Administrator\Desktop\111 -
-//        副本\ZStack-CC2530-r200\Projects\SappWsn\..\..\Components\stack\af\"
-//        -I "C:\Users\Administrator\Desktop\111 -
-//        副本\ZStack-CC2530-r200\Projects\SappWsn\..\..\Components\stack\nwk\"
-//        -I "C:\Users\Administrator\Desktop\111 -
-//        副本\ZStack-CC2530-r200\Projects\SappWsn\..\..\Components\stack\sapi\"
-//        -I "C:\Users\Administrator\Desktop\111 -
-//        副本\ZStack-CC2530-r200\Projects\SappWsn\..\..\Components\stack\sec\"
-//        -I "C:\Users\Administrator\Desktop\111 -
-//        副本\ZStack-CC2530-r200\Projects\SappWsn\..\..\Components\stack\sys\"
-//        -I "C:\Users\Administrator\Desktop\111 -
-//        副本\ZStack-CC2530-r200\Projects\SappWsn\..\..\Components\stack\zdo\"
-//        -I "C:\Users\Administrator\Desktop\111 -
-//        副本\ZStack-CC2530-r200\Projects\SappWsn\..\..\Components\zmac\" -I
-//        "C:\Users\Administrator\Desktop\111 -
-//        副本\ZStack-CC2530-r200\Projects\SappWsn\..\..\Components\zmac\f8w\"
+//        -DREJOIN_POLL_RATE=440) -I
+//        D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Projects\SappWsn\ -I
+//        D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Projects\SappWsn\Source\
+//        -I
+//        D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Projects\SappWsn\..\zstack\ZMain\TI2530DB\
+//        -I
+//        D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Projects\SappWsn\..\..\Components\hal\include\
+//        -I
+//        D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Projects\SappWsn\..\..\Components\hal\target\CC2530EB\
+//        -I
+//        D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Projects\SappWsn\..\..\Components\mac\include\
+//        -I
+//        D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Projects\SappWsn\..\..\Components\mac\high_level\
+//        -I
+//        D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Projects\SappWsn\..\..\Components\mac\low_level\srf04\
+//        -I
+//        D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Projects\SappWsn\..\..\Components\mac\low_level\srf04\single_chip\
+//        -I
+//        D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Projects\SappWsn\..\..\Components\mt\
+//        -I
+//        D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Projects\SappWsn\..\..\Components\osal\include\
+//        -I
+//        D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Projects\SappWsn\..\..\Components\services\saddr\
+//        -I
+//        D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Projects\SappWsn\..\..\Components\services\sdata\
+//        -I
+//        D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Projects\SappWsn\..\..\Components\stack\af\
+//        -I
+//        D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Projects\SappWsn\..\..\Components\stack\nwk\
+//        -I
+//        D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Projects\SappWsn\..\..\Components\stack\sapi\
+//        -I
+//        D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Projects\SappWsn\..\..\Components\stack\sec\
+//        -I
+//        D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Projects\SappWsn\..\..\Components\stack\sys\
+//        -I
+//        D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Projects\SappWsn\..\..\Components\stack\zdo\
+//        -I
+//        D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Projects\SappWsn\..\..\Components\zmac\
+//        -I
+//        D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Projects\SappWsn\..\..\Components\zmac\f8w\
 //        -Ohz --require_prototypes --no_code_motion)
 //    Locale             =  Chinese (Simplified)_CHN.936
 //    List file          =  
-//        C:\Users\Administrator\Desktop\111 -
-//        副本\ZStack-CC2530-r200\Projects\SappWsn\RouterEB\List\SAPP_FrameWork.s51
+//        D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Projects\SappWsn\RouterEB\List\SAPP_FrameWork.s51
 //
 ///////////////////////////////////////////////////////////////////////////////
 
@@ -359,6 +354,8 @@ HalLedBlink         SYMBOL "HalLedBlink"
 `??HalLedBlink::?relay` SYMBOL "?relay", HalLedBlink
 HalUARTWrite        SYMBOL "HalUARTWrite"
 `??HalUARTWrite::?relay` SYMBOL "?relay", HalUARTWrite
+MT_UartRegisterTaskID SYMBOL "MT_UartRegisterTaskID"
+`??MT_UartRegisterTaskID::?relay` SYMBOL "?relay", MT_UartRegisterTaskID
 NLME_GetCoordShortAddr SYMBOL "NLME_GetCoordShortAddr"
 `??NLME_GetCoordShortAddr::?relay` SYMBOL "?relay", NLME_GetCoordShortAddr
 NLME_GetExtAddr     SYMBOL "NLME_GetExtAddr"
@@ -406,6 +403,8 @@ sapp_taskInitProcess SYMBOL "sapp_taskInitProcess"
         FUNCTION `??HalLedBlink::?relay`,00H
         EXTERN `??HalUARTWrite::?relay`
         FUNCTION `??HalUARTWrite::?relay`,00H
+        EXTERN `??MT_UartRegisterTaskID::?relay`
+        FUNCTION `??MT_UartRegisterTaskID::?relay`,00H
         EXTERN `??NLME_GetCoordShortAddr::?relay`
         FUNCTION `??NLME_GetCoordShortAddr::?relay`,00H
         EXTERN `??NLME_GetExtAddr::?relay`
@@ -452,6 +451,13 @@ sapp_taskInitProcess SYMBOL "sapp_taskInitProcess"
         ARGFRAME ISTACK, 2, STACK
         ARGFRAME PSTACK, 0, STACK
         ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN MT_UartRegisterTaskID
+        FUNCTION MT_UartRegisterTaskID,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 10, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
         EXTERN NLME_GetCoordShortAddr
@@ -529,7 +535,7 @@ sapp_taskInitProcess SYMBOL "sapp_taskInitProcess"
         ARGFRAME DOVERLAY, 0, STATIC
         EXTERN tasksCnt
 
-// C:\Users\Administrator\Desktop\111 - 副本\ZStack-CC2530-r200\Projects\SappWsn\Source\SAPP_FrameWork.c
+// D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Projects\SappWsn\Source\SAPP_FrameWork.c
 //    1 #if defined(SAPP_ZSTACK)
 //    2 #include "SAPP_FrameWork.h"
 //    3 #include <string.h>
@@ -641,6 +647,17 @@ sapp_taskInitProcess:
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
         FUNCALL sapp_taskInitProcess, createEndPoint
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 10, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 10, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL sapp_taskInitProcess, MT_UartRegisterTaskID
         LOCFRAME ISTACK, 0, STACK
         LOCFRAME PSTACK, 0, STACK
         LOCFRAME XSTACK, 10, STACK
@@ -878,10 +895,15 @@ sapp_taskInitProcess:
         LCALL     ?Subroutine10 & 0xFFFF
 ??CrossCallReturnLabel_10:
         JC        ??sapp_taskInitProcess_3
-//   69 #if defined(ZDO_COORDINATOR)// || defined(RTR_NWK)
+//   69 //#if defined(ZDO_COORDINATOR)// || defined(RTR_NWK)
 //   70 //    RegisterForKeys( SampleApp_TaskID );
 //   71     MT_UartRegisterTaskID(controlTaskId);
-//   72 #endif
+        ; Setup parameters for call to function MT_UartRegisterTaskID
+        MOV       DPTR,#controlTaskId
+        MOVX      A,@DPTR
+        MOV       R1,A
+        LCALL     `??MT_UartRegisterTaskID::?relay`; Banked call to: MT_UartRegisterTaskID
+//   72 //#endif
 //   73 }
           CFI EndBlock cfiBlock0
         REQUIRE ?Subroutine0
@@ -1704,6 +1726,17 @@ sapp_controlEpProcess:
         ARGFRAME XSTACK, 19, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL sapp_controlEpProcess, HalLedBlink
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 17, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 17, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
         FUNCALL sapp_controlEpProcess, SendData
         LOCFRAME ISTACK, 0, STACK
         LOCFRAME PSTACK, 0, STACK
@@ -1810,87 +1843,92 @@ sapp_controlEpProcess:
         JNZ       $+5
         LJMP      ??sapp_controlEpProcess_0 & 0xFFFF
 //  111     {
-//  112         MSGpkt = (afIncomingMSGPacket_t *)osal_msg_receive(task_id);
+//  112         //HalLedBlink( HAL_LED_1, 2, 50, 90 );
+//  113         MSGpkt = (afIncomingMSGPacket_t *)osal_msg_receive(task_id);
         ; Setup parameters for call to function osal_msg_receive
         LJMP      ??sapp_controlEpProcess_1 & 0xFFFF
-//  113         while ( MSGpkt )
-//  114         {
-//  115             switch ( MSGpkt->hdr.event )
-//  116             {
-//  117 #if defined(ZDO_COORDINATOR)
-//  118             case CMD_SERIAL_MSG:
-//  119                 uartMsgProcesser((uint8 *)MSGpkt);
-//  120                 HalLedBlink( HAL_LED_1, 2, 50, 90 );
-//  121                 break;
-//  122 #else
-//  123             case CMD_SERIAL_MSG:
-//  124                 uartMsgProcesser1((uint8 *)MSGpkt);
-//  125                 break;
-//  126 #endif
-//  127                 // Received when a messages is received (OTA) for this endpoint
-//  128             case AF_INCOMING_MSG_CMD:
-//  129             {
-//  130                 // TODO: QueryProfile or QueryTopo
-//  131                 switch(MSGpkt->clusterId)
-//  132                 {
-//  133                 case SAPP_PERIODIC_CLUSTERID:
-//  134                     switch(MSGpkt->cmd.Data[0])
-//  135                     {
-//  136                     case 0x01:
-//  137                         // CtrlQueryProfile
-//  138                         // 获取到数据包的来源地址来当做发送数据的目标
-//  139                         SendData(CONTROL_ENDPOINT, funcTableBuffer->ft_data, MSGpkt->srcAddr.addr.shortAddr, MSGpkt->srcAddr.endPoint, sizeof(FUNCTABLE) + funcCount * sizeof(FUNCINFO));
-//  140                         break;
-//  141                     case 0x02:
-//  142                         // CtrlQueryTopo
+//  114         while ( MSGpkt )
+//  115         {
+//  116             //HalUARTWrite(0, &MSGpkt->hdr.event,1);
+//  117             switch ( MSGpkt->hdr.event )
+//  118             {
+//  119 #if defined(ZDO_COORDINATOR)
+//  120             case CMD_SERIAL_MSG:
+//  121                 uartMsgProcesser((uint8 *)MSGpkt);
+//  122                 HalLedBlink( HAL_LED_1, 2, 50, 90 );
+//  123                 break;
+//  124 #endif
+//  125 
+//  126 #if ! defined(ZDO_COORDINATOR) && defined(RTR_NWK)
+//  127             case CMD_SERIAL_MSG:
+//  128                 uartMsgProcesser1((uint8 *)MSGpkt);
+//  129                 HalLedBlink( HAL_LED_1, 2, 50, 90 );
+//  130                 break;
+//  131 #endif
+//  132                 // Received when a messages is received (OTA) for this endpoint
+//  133             case AF_INCOMING_MSG_CMD:
+//  134             {
+//  135                 // TODO: QueryProfile or QueryTopo
+//  136                 switch(MSGpkt->clusterId)
+//  137                 {
+//  138                 case SAPP_PERIODIC_CLUSTERID:
+//  139                     switch(MSGpkt->cmd.Data[0])
+//  140                     {
+//  141                     case 0x01:
+//  142                         // CtrlQueryProfile
 //  143                         // 获取到数据包的来源地址来当做发送数据的目标
-//  144                         SendData(CONTROL_ENDPOINT, (unsigned char *)&topoBuffer, MSGpkt->srcAddr.addr.shortAddr, MSGpkt->srcAddr.endPoint, sizeof(TOPOINFO));
+//  144                         SendData(CONTROL_ENDPOINT, funcTableBuffer->ft_data, MSGpkt->srcAddr.addr.shortAddr, MSGpkt->srcAddr.endPoint, sizeof(FUNCTABLE) + funcCount * sizeof(FUNCINFO));
 //  145                         break;
-//  146                     case 0x03:
-//  147                         // CtrlQuerySpecialFunction
-//  148                         // cmd.Data[0] = 3, cmd.Data[1] = funcCode, cmd.Data[2] = funcID
-//  149                         {
-//  150                             uint8 i;
-//  151                             for(i = 0; i < funcTableBuffer->ft_count; i++)
-//  152                             {
-//  153                                 if((funcTableBuffer->ft_list[i].type == MSGpkt->cmd.Data[1])
-//  154                                    && (funcTableBuffer->ft_list[i].id == MSGpkt->cmd.Data[2]))
-//  155                                 {
-//  156                                     // 0x03, EndPoint, rCycle
-//  157                                     uint8 specialFunc[3] = { 0x03, i + 1, funcTableBuffer->ft_list[i].cycle };
-//  158                                     SendData(CONTROL_ENDPOINT, specialFunc, MSGpkt->srcAddr.addr.shortAddr, MSGpkt->srcAddr.endPoint, sizeof(specialFunc));
-//  159                                     break;
-//  160                                 }
-//  161                             }
-//  162                         }
-//  163                         break;
-//  164                     default:
-//  165                         {
-//  166                             int i;
-//  167                             for(i = 0; i < funcCount; i++)
-//  168                             {
-//  169                                 struct ep_info_t *ep = &funcList[i];
-//  170                                 if(ep->res_available)   (*ep->res_available)(ep, ResControlPkg, MSGpkt);
-//  171                             }
-//  172                         }
-//  173                         break;
-//  174                     }
-//  175                     HalLedBlink( HAL_LED_2, 1, 50, 250 );
-//  176                     break;
-//  177                 }
-//  178                 break;
-//  179             }
-//  180             // Received whenever the device changes state in the network
-//  181             case ZDO_STATE_CHANGE:
-//  182             {
-//  183                 devStates_t st = (devStates_t)(MSGpkt->hdr.status);
+//  146                     case 0x02:
+//  147                         // CtrlQueryTopo
+//  148                         // 获取到数据包的来源地址来当做发送数据的目标
+//  149                         SendData(CONTROL_ENDPOINT, (unsigned char *)&topoBuffer, MSGpkt->srcAddr.addr.shortAddr, MSGpkt->srcAddr.endPoint, sizeof(TOPOINFO));
+//  150                         break;
+//  151                     case 0x03:
+//  152                         // CtrlQuerySpecialFunction
+//  153                         // cmd.Data[0] = 3, cmd.Data[1] = funcCode, cmd.Data[2] = funcID
+//  154                         {
+//  155                             uint8 i;
+//  156                             for(i = 0; i < funcTableBuffer->ft_count; i++)
+//  157                             {
+//  158                                 if((funcTableBuffer->ft_list[i].type == MSGpkt->cmd.Data[1])
+//  159                                    && (funcTableBuffer->ft_list[i].id == MSGpkt->cmd.Data[2]))
+//  160                                 {
+//  161                                     // 0x03, EndPoint, rCycle
+//  162                                     uint8 specialFunc[3] = { 0x03, i + 1, funcTableBuffer->ft_list[i].cycle };
+//  163                                     SendData(CONTROL_ENDPOINT, specialFunc, MSGpkt->srcAddr.addr.shortAddr, MSGpkt->srcAddr.endPoint, sizeof(specialFunc));
+//  164                                     break;
+//  165                                 }
+//  166                             }
+//  167                         }
+//  168                         break;
+//  169                     default:
+//  170                         {
+//  171                             int i;
+//  172                             for(i = 0; i < funcCount; i++)
+//  173                             {
+//  174                                 struct ep_info_t *ep = &funcList[i];
+//  175                                 if(ep->res_available)   (*ep->res_available)(ep, ResControlPkg, MSGpkt);
+//  176                             }
+//  177                         }
+//  178                         break;
+//  179                     }
+//  180                     HalLedBlink( HAL_LED_2, 1, 50, 250 );
+//  181                     break;
+//  182                 }
+//  183                 break;
+//  184             }
+//  185             // Received whenever the device changes state in the network
+//  186             case ZDO_STATE_CHANGE:
+//  187             {
+//  188                 devStates_t st = (devStates_t)(MSGpkt->hdr.status);
 ??sapp_controlEpProcess_2:
         INC       DPTR
         MOVX      A,@DPTR
         MOV       R0,A
-//  184                 if ( (st == DEV_ZB_COORD)
-//  185                         || (st == DEV_ROUTER)
-//  186                         || (st == DEV_END_DEVICE) )
+//  189                 if ( (st == DEV_ZB_COORD)
+//  190                         || (st == DEV_ROUTER)
+//  191                         || (st == DEV_END_DEVICE) )
         MOV       A,#0x9
         XRL       A,R0
         JZ        ??sapp_controlEpProcess_3
@@ -1901,9 +1939,9 @@ sapp_controlEpProcess:
         XRL       A,R0
         JZ        $+5
         LJMP      ??sapp_controlEpProcess_4 & 0xFFFF
-//  187                 {
-//  188 //                    topoBuffer->type = 0x02;
-//  189                     memcpy(topoBuffer.IEEE, NLME_GetExtAddr(), 8);
+//  192                 {
+//  193 //                    topoBuffer->type = 0x02;
+//  194                     memcpy(topoBuffer.IEEE, NLME_GetExtAddr(), 8);
 ??sapp_controlEpProcess_3:
         ; Setup parameters for call to function NLME_GetExtAddr
         LCALL     `??NLME_GetExtAddr::?relay`; Banked call to: NLME_GetExtAddr
@@ -1923,8 +1961,8 @@ sapp_controlEpProcess:
         MOV       A,#0x2
         LCALL     ?DEALLOC_XSTACK8
           CFI CFA_XSP16 add(XSP16, 17)
-//  190 #if !defined(ZDO_COORDINATOR)
-//  191                     topoBuffer.PAddr = NLME_GetCoordShortAddr();
+//  195 #if !defined(ZDO_COORDINATOR)
+//  196                     topoBuffer.PAddr = NLME_GetCoordShortAddr();
         ; Setup parameters for call to function NLME_GetCoordShortAddr
         LCALL     `??NLME_GetCoordShortAddr::?relay`; Banked call to: NLME_GetCoordShortAddr
         MOV       DPTR,#topoBuffer + 9
@@ -1933,10 +1971,10 @@ sapp_controlEpProcess:
         INC       DPTR
         MOV       A,R3
         MOVX      @DPTR,A
-//  192 #else
-//  193                     topoBuffer.PAddr = 0xFFFF;
-//  194 #endif
-//  195                     osal_memcpy(&topoBuffer.panid, &_NIB.nwkPanId, sizeof(uint16));
+//  197 #else
+//  198                     topoBuffer.PAddr = 0xFFFF;
+//  199 #endif
+//  200                     osal_memcpy(&topoBuffer.panid, &_NIB.nwkPanId, sizeof(uint16));
         ; Setup parameters for call to function osal_memcpy
         MOV       ?V0,#(_NIB + 33) & 0xff
         MOV       ?V1,#((_NIB + 33) >> 8) & 0xff
@@ -1952,7 +1990,7 @@ sapp_controlEpProcess:
         MOV       A,#0x3
         LCALL     ?DEALLOC_XSTACK8
           CFI CFA_XSP16 add(XSP16, 17)
-//  196                     osal_memcpy(&topoBuffer.channel, &_NIB.nwkLogicalChannel, sizeof(uint8));
+//  201                     osal_memcpy(&topoBuffer.channel, &_NIB.nwkLogicalChannel, sizeof(uint8));
         ; Setup parameters for call to function osal_memcpy
         MOV       ?V0,#(_NIB + 22) & 0xff
         MOV       ?V1,#((_NIB + 22) >> 8) & 0xff
@@ -1967,8 +2005,8 @@ sapp_controlEpProcess:
         MOV       A,#0x3
         LCALL     ?DEALLOC_XSTACK8
           CFI CFA_XSP16 add(XSP16, 17)
-//  197                     //向协调器发送拓扑信息
-//  198                     SendData(CONTROL_ENDPOINT, (unsigned char *)&topoBuffer, 0x0000, TRANSFER_ENDPOINT, sizeof(TOPOINFO));
+//  202                     //向协调器发送拓扑信息
+//  203                     SendData(CONTROL_ENDPOINT, (unsigned char *)&topoBuffer, 0x0000, TRANSFER_ENDPOINT, sizeof(TOPOINFO));
         ; Setup parameters for call to function SendData
         MOV       ?V0,#0xe
         MOV       R0,#?V0
@@ -1986,7 +2024,7 @@ sapp_controlEpProcess:
 ??CrossCallReturnLabel_80:
         LCALL     ?DEALLOC_XSTACK8
           CFI CFA_XSP16 add(XSP16, 17)
-//  199                     HalLedBlink( HAL_LED_2, 4, 50, 250 );
+//  204                     HalLedBlink( HAL_LED_2, 4, 50, 250 );
         ; Setup parameters for call to function HalLedBlink
         MOV       R4,#-0x6
         MOV       R5,#0x0
@@ -1994,15 +2032,16 @@ sapp_controlEpProcess:
         MOV       R2,#0x4
 ??sapp_controlEpProcess_5:
         MOV       R1,#0x2
+??sapp_controlEpProcess_6:
         LCALL     `??HalLedBlink::?relay`; Banked call to: HalLedBlink
-//  200                 }
-//  201             }
-//  202             break;
-//  203             default:
-//  204                 break;
-//  205             }
-//  206             // Release the memory
-//  207             osal_msg_deallocate( (uint8 *)MSGpkt );
+//  205                 }
+//  206             }
+//  207             break;
+//  208             default:
+//  209                 break;
+//  210             }
+//  211             // Release the memory
+//  212             osal_msg_deallocate( (uint8 *)MSGpkt );
 ??sapp_controlEpProcess_4:
         ; Setup parameters for call to function osal_msg_deallocate
         MOV       A,R6
@@ -2010,8 +2049,8 @@ sapp_controlEpProcess:
         MOV       A,R7
         MOV       R3,A
         LCALL     `??osal_msg_deallocate::?relay`; Banked call to: osal_msg_deallocate
-//  208             // Next - if one is available
-//  209             MSGpkt = (afIncomingMSGPacket_t *)osal_msg_receive( task_id );
+//  213             // Next - if one is available
+//  214             MSGpkt = (afIncomingMSGPacket_t *)osal_msg_receive( task_id );
         ; Setup parameters for call to function osal_msg_receive
         MOV       R1,?V3
 ??sapp_controlEpProcess_1:
@@ -2023,19 +2062,19 @@ sapp_controlEpProcess:
         MOV       A,R6
         ORL       A,R7
         JNZ       $+5
-        LJMP      ??sapp_controlEpProcess_6 & 0xFFFF
+        LJMP      ??sapp_controlEpProcess_7 & 0xFFFF
         MOV       DPL,R6
         MOV       DPH,R7
         MOVX      A,@DPTR
         DEC       A
-        JZ        ??sapp_controlEpProcess_7
-        ADD       A,#-0x19
         JZ        ??sapp_controlEpProcess_8
+        ADD       A,#-0x19
+        JZ        ??sapp_controlEpProcess_9
         ADD       A,#0x49
         JNZ       $+5
         LJMP      ??sapp_controlEpProcess_2 & 0xFFFF
         SJMP      ??sapp_controlEpProcess_4
-??sapp_controlEpProcess_7:
+??sapp_controlEpProcess_8:
         MOV       R0,#0x0
         INC       DPTR
         INC       DPTR
@@ -2044,7 +2083,7 @@ sapp_controlEpProcess:
         INC       DPTR
         MOVX      A,@DPTR
         MOV       R3,A
-??sapp_controlEpProcess_9:
+??sapp_controlEpProcess_10:
         MOV       ?V2,R0
         MOV       A,#0x1
         ADD       A,R0
@@ -2059,7 +2098,7 @@ sapp_controlEpProcess:
         INC       DPTR
         MOVX      A,@DPTR
         XRL       A,#0xa
-        JZ        ??sapp_controlEpProcess_10
+        JZ        ??sapp_controlEpProcess_11
         MOV       DPL,R2
         MOV       DPH,R3
         INC       DPTR
@@ -2069,8 +2108,8 @@ sapp_controlEpProcess:
         MOV       A,R0
         CLR       C
         SUBB      A,R1
-        JC        ??sapp_controlEpProcess_9
-??sapp_controlEpProcess_10:
+        JC        ??sapp_controlEpProcess_10
+??sapp_controlEpProcess_11:
         ; Setup parameters for call to function SendData
         MOV       A,R0
         MOV       ?V0,A
@@ -2093,18 +2132,24 @@ sapp_controlEpProcess:
 ??CrossCallReturnLabel_82:
         LCALL     ?DEALLOC_XSTACK8
           CFI CFA_XSP16 add(XSP16, 17)
-        LJMP      ??sapp_controlEpProcess_4 & 0xFFFF
-??sapp_controlEpProcess_8:
+        ; Setup parameters for call to function HalLedBlink
+        MOV       R4,#0x5a
+        MOV       R5,#0x0
+        MOV       R3,#0x32
+        MOV       R2,#0x2
+        MOV       R1,#0x1
+        LJMP      ??sapp_controlEpProcess_6 & 0xFFFF
+??sapp_controlEpProcess_9:
         INC       DPTR
         INC       DPTR
         INC       DPTR
         INC       DPTR
         MOVX      A,@DPTR
         XRL       A,#0x1
-        JNZ       ??sapp_controlEpProcess_11
+        JNZ       ??sapp_controlEpProcess_12
         INC       DPTR
         MOVX      A,@DPTR
-??sapp_controlEpProcess_11:
+??sapp_controlEpProcess_12:
         JZ        $+5
         LJMP      ??sapp_controlEpProcess_4 & 0xFFFF
         LCALL     ?Subroutine29 & 0xFFFF
@@ -2113,13 +2158,13 @@ sapp_controlEpProcess:
 ??CrossCallReturnLabel_52:
         MOVX      A,@DPTR
         DEC       A
-        JZ        ??sapp_controlEpProcess_12
-        DEC       A
         JZ        ??sapp_controlEpProcess_13
         DEC       A
         JZ        ??sapp_controlEpProcess_14
-        LJMP      ??sapp_controlEpProcess_15 & 0xFFFF
-??sapp_controlEpProcess_12:
+        DEC       A
+        JZ        ??sapp_controlEpProcess_15
+        LJMP      ??sapp_controlEpProcess_16 & 0xFFFF
+??sapp_controlEpProcess_13:
         ; Setup parameters for call to function SendData
         MOV       B,#0x3
         MOV       DPTR,#funcCount
@@ -2142,9 +2187,9 @@ sapp_controlEpProcess:
         INC       DPTR
         MOVX      A,@DPTR
         MOV       R3,A
-        LJMP      ??sapp_controlEpProcess_16 & 0xFFFF
+        LJMP      ??sapp_controlEpProcess_17 & 0xFFFF
           CFI CFA_XSP16 add(XSP16, 17)
-??sapp_controlEpProcess_13:
+??sapp_controlEpProcess_14:
         ; Setup parameters for call to function SendData
         MOV       ?V0,#0xe
         MOV       R0,#?V0
@@ -2158,14 +2203,14 @@ sapp_controlEpProcess:
 ??CrossCallReturnLabel_78:
         MOV       R2,#topoBuffer & 0xff
         MOV       R3,#(topoBuffer >> 8) & 0xff
-        LJMP      ??sapp_controlEpProcess_16 & 0xFFFF
+        LJMP      ??sapp_controlEpProcess_17 & 0xFFFF
           CFI CFA_XSP16 add(XSP16, 17)
-??sapp_controlEpProcess_14:
+??sapp_controlEpProcess_15:
         MOV       R2,#0x0
-        SJMP      ??sapp_controlEpProcess_17
-??sapp_controlEpProcess_18:
+        SJMP      ??sapp_controlEpProcess_18
+??sapp_controlEpProcess_19:
         INC       R2
-??sapp_controlEpProcess_17:
+??sapp_controlEpProcess_18:
         MOV       DPTR,#funcTableBuffer
         MOVX      A,@DPTR
         MOV       R0,A
@@ -2178,7 +2223,7 @@ sapp_controlEpProcess:
         CLR       C
         SUBB      A,R0
         JC        $+5
-        LJMP      ??sapp_controlEpProcess_19 & 0xFFFF
+        LJMP      ??sapp_controlEpProcess_20 & 0xFFFF
         MOV       A,R2
         MOV       B,#0x3
         MUL       AB
@@ -2197,7 +2242,7 @@ sapp_controlEpProcess:
 ??CrossCallReturnLabel_3:
         MOVX      A,@DPTR
         XRL       A,R1
-        JNZ       ??sapp_controlEpProcess_18
+        JNZ       ??sapp_controlEpProcess_19
         MOV       A,R2
         MOV       B,#0x3
         MUL       AB
@@ -2217,7 +2262,7 @@ sapp_controlEpProcess:
         INC       DPTR
         MOVX      A,@DPTR
         XRL       A,R1
-        JNZ       ??sapp_controlEpProcess_18
+        JNZ       ??sapp_controlEpProcess_19
         MOV       DPTR,#`?<Constant {3, 0, 0}>`
         MOV       R4,?XSP + 0
         MOV       R5,?XSP + 1
@@ -2260,22 +2305,22 @@ sapp_controlEpProcess:
 ??CrossCallReturnLabel_79:
         MOV       A,#0x2
         LCALL     ?XSTACK_DISP101_8
-??sapp_controlEpProcess_16:
+??sapp_controlEpProcess_17:
         LCALL     ?Subroutine23 & 0xFFFF
 ??CrossCallReturnLabel_81:
         LCALL     ?DEALLOC_XSTACK8
           CFI CFA_XSP16 add(XSP16, 17)
-        SJMP      ??sapp_controlEpProcess_19
-??sapp_controlEpProcess_15:
+        SJMP      ??sapp_controlEpProcess_20
+??sapp_controlEpProcess_16:
         MOV       ?V0,#0x0
         MOV       ?V1,#0x0
-        SJMP      ??sapp_controlEpProcess_20
-??sapp_controlEpProcess_21:
+        SJMP      ??sapp_controlEpProcess_21
+??sapp_controlEpProcess_22:
         LCALL     ?Subroutine15 & 0xFFFF
 ??CrossCallReturnLabel_17:
         LCALL     ?Subroutine3 & 0xFFFF
 ??CrossCallReturnLabel_61:
-        JZ        ??sapp_controlEpProcess_22
+        JZ        ??sapp_controlEpProcess_23
         ; Setup parameters for indirect call
         MOV       A,R6
         MOV       R4,A
@@ -2285,79 +2330,79 @@ sapp_controlEpProcess:
         LCALL     ?Subroutine6 & 0xFFFF
 ??CrossCallReturnLabel_59:
         LCALL     ?CALL_IND
-??sapp_controlEpProcess_22:
+??sapp_controlEpProcess_23:
         INC       ?V0
         MOV       A,?V0
-        JNZ       ??sapp_controlEpProcess_20
+        JNZ       ??sapp_controlEpProcess_21
         INC       ?V1
-??sapp_controlEpProcess_20:
+??sapp_controlEpProcess_21:
         LCALL     ?Subroutine4 & 0xFFFF
 ??CrossCallReturnLabel_0:
-        JC        ??sapp_controlEpProcess_21
-??sapp_controlEpProcess_19:
+        JC        ??sapp_controlEpProcess_22
+??sapp_controlEpProcess_20:
         ; Setup parameters for call to function HalLedBlink
         MOV       R4,#-0x6
         MOV       R5,#0x0
         MOV       R3,#0x32
         MOV       R2,#0x1
         LJMP      ??sapp_controlEpProcess_5 & 0xFFFF
-//  210         }
-//  211         // return unprocessed events
-//  212         return (events ^ SYS_EVENT_MSG);
-??sapp_controlEpProcess_6:
+//  215         }
+//  216         // return unprocessed events
+//  217         return (events ^ SYS_EVENT_MSG);
+??sapp_controlEpProcess_7:
         MOV       R2,?V4
         MOV       A,?V5
         XRL       A,#0x80
         MOV       R3,A
-        SJMP      ??sapp_controlEpProcess_23
-//  213     }
-//  214     // 定时器时间到, 遍历所有端点看是否有userTimer
-//  215     if(events & SAPP_SEND_PERIODIC_MSG_EVT)
+        SJMP      ??sapp_controlEpProcess_24
+//  218     }
+//  219     // 定时器时间到, 遍历所有端点看是否有userTimer
+//  220     if(events & SAPP_SEND_PERIODIC_MSG_EVT)
 ??sapp_controlEpProcess_0:
         MOV       A,R2
         MOV       C,0xE0 /* A   */.0
-        JNC       ??sapp_controlEpProcess_24
-//  216     {
-//  217         int i;
-//  218         uint8 hasUserTimer = 0;
+        JNC       ??sapp_controlEpProcess_25
+//  221     {
+//  222         int i;
+//  223         uint8 hasUserTimer = 0;
         MOV       R6,#0x0
-//  219         for(i = 0; i < funcCount; i++)
+//  224         for(i = 0; i < funcCount; i++)
         MOV       ?V0,R6
         MOV       ?V1,R6
-        SJMP      ??sapp_controlEpProcess_25
-//  220         {
-//  221             struct ep_info_t *ep = &funcList[i];
-??sapp_controlEpProcess_26:
+        SJMP      ??sapp_controlEpProcess_26
+//  225         {
+//  226             struct ep_info_t *ep = &funcList[i];
+??sapp_controlEpProcess_27:
         LCALL     ?Subroutine15 & 0xFFFF
 ??CrossCallReturnLabel_18:
         ADDC      A,R1
         MOV       R3,A
-//  222             if(ep->userTimer && ep->res_available)
+//  227             if(ep->userTimer && ep->res_available)
         LCALL     ?Subroutine21 & 0xFFFF
 ??CrossCallReturnLabel_29:
-        JZ        ??sapp_controlEpProcess_27
+        JZ        ??sapp_controlEpProcess_28
         MOV       DPL,R2
         MOV       DPH,R3
         LCALL     ??Subroutine32_0 & 0xFFFF
 ??CrossCallReturnLabel_68:
-        JZ        ??sapp_controlEpProcess_27
-//  223             {
-//  224                 hasUserTimer = 1;
+        JZ        ??sapp_controlEpProcess_28
+//  228             {
+//  229                 hasUserTimer = 1;
         MOV       R6,#0x1
-//  225                 ep->userTimer = ep->userTimer - 1;
+//  230                 ep->userTimer = ep->userTimer - 1;
         LCALL     ?Subroutine21 & 0xFFFF
 ??CrossCallReturnLabel_30:
         DEC       A
         MOVX      @DPTR,A
-//  226                 if(ep->userTimer <= 1)
+//  231                 if(ep->userTimer <= 1)
         CLR       C
         SUBB      A,#0x2
-        JNC       ??sapp_controlEpProcess_27
-//  227                 {
-//  228                     ep->userTimer = 0;
+        JNC       ??sapp_controlEpProcess_28
+//  232                 {
+//  233                     ep->userTimer = 0;
         CLR       A
         MOVX      @DPTR,A
-//  229                     (*ep->res_available)(ep, ResUserTimer, NULL);
+//  234                     (*ep->res_available)(ep, ResUserTimer, NULL);
         ; Setup parameters for indirect call
         MOV       R4,A
         MOV       R5,A
@@ -2373,27 +2418,27 @@ sapp_controlEpProcess:
         MOVX      A,@DPTR
         MOV       R0,A
         LCALL     ??Subroutine31_0 & 0xFFFF
-//  230                 }
-//  231             }
-//  232         }
+//  235                 }
+//  236             }
+//  237         }
 ??CrossCallReturnLabel_54:
         LCALL     ?CALL_IND
-??sapp_controlEpProcess_27:
+??sapp_controlEpProcess_28:
         INC       ?V0
         MOV       A,?V0
-        JNZ       ??sapp_controlEpProcess_25
+        JNZ       ??sapp_controlEpProcess_26
         INC       ?V1
-??sapp_controlEpProcess_25:
+??sapp_controlEpProcess_26:
         LCALL     ?Subroutine4 & 0xFFFF
 ??CrossCallReturnLabel_1:
-        JC        ??sapp_controlEpProcess_26
-//  233         if(hasUserTimer)
+        JC        ??sapp_controlEpProcess_27
+//  238         if(hasUserTimer)
         MOV       A,R6
         MOV       C,0xE0 /* A   */.0
-        JNC       ??sapp_controlEpProcess_28
-//  234         {
-//  235             // 重新启动定时器
-//  236             osal_start_timerEx(task_id, SAPP_SEND_PERIODIC_MSG_EVT, 1000);
+        JNC       ??sapp_controlEpProcess_29
+//  239         {
+//  240             // 重新启动定时器
+//  241             osal_start_timerEx(task_id, SAPP_SEND_PERIODIC_MSG_EVT, 1000);
         ; Setup parameters for call to function osal_start_timerEx
         MOV       R4,#-0x18
         MOV       R5,#0x3
@@ -2401,43 +2446,43 @@ sapp_controlEpProcess:
         MOV       R3,#0x0
         MOV       R1,?V3
         LCALL     `??osal_start_timerEx::?relay`; Banked call to: osal_start_timerEx
-        SJMP      ??sapp_controlEpProcess_29
-//  237         }
-//  238         else
-//  239         {
-//  240             isUserTimerRunning = 0;
-??sapp_controlEpProcess_28:
+        SJMP      ??sapp_controlEpProcess_30
+//  242         }
+//  243         else
+//  244         {
+//  245             isUserTimerRunning = 0;
+??sapp_controlEpProcess_29:
         MOV       DPTR,#isUserTimerRunning
         CLR       A
         MOVX      @DPTR,A
-//  241             osal_stop_timerEx(task_id, SAPP_SEND_PERIODIC_MSG_EVT);
+//  246             osal_stop_timerEx(task_id, SAPP_SEND_PERIODIC_MSG_EVT);
         ; Setup parameters for call to function osal_stop_timerEx
         MOV       R2,#0x1
         MOV       R3,A
         MOV       R1,?V3
         LCALL     `??osal_stop_timerEx::?relay`; Banked call to: osal_stop_timerEx
-//  242         }
-//  243         // return unprocessed events
-//  244         return (events ^ SAPP_SEND_PERIODIC_MSG_EVT);
-??sapp_controlEpProcess_29:
+//  247         }
+//  248         // return unprocessed events
+//  249         return (events ^ SAPP_SEND_PERIODIC_MSG_EVT);
+??sapp_controlEpProcess_30:
         MOV       A,?V4
         XRL       A,#0x1
         MOV       R2,A
         MOV       R3,?V5
-        SJMP      ??sapp_controlEpProcess_23
-//  245     }
-//  246     // Discard unknown events
-//  247     return 0;
-??sapp_controlEpProcess_24:
+        SJMP      ??sapp_controlEpProcess_24
+//  250     }
+//  251     // Discard unknown events
+//  252     return 0;
+??sapp_controlEpProcess_25:
         MOV       R2,#0x0
         MOV       R3,#0x0
-??sapp_controlEpProcess_23:
+??sapp_controlEpProcess_24:
         MOV       A,#0x3
         LCALL     ?DEALLOC_XSTACK8
           CFI CFA_XSP16 add(XSP16, 14)
         MOV       R7,#0x6
         LJMP      ?BANKED_LEAVE_XDATA
-//  248 }
+//  253 }
           CFI EndBlock cfiBlock31
 
         RSEG BANKED_CODE:HUGECODE:NOROOT(0)
@@ -3786,15 +3831,15 @@ sapp_controlEpProcess:
         DB 3
         DB 0
         DB 0
-//  249 
+//  254 
 
         RSEG BANKED_CODE:HUGECODE:NOROOT(0)
-//  250 uint16 sapp_functionEpProcess(uint8 task_id, uint16 events)
+//  255 uint16 sapp_functionEpProcess(uint8 task_id, uint16 events)
 sapp_functionEpProcess:
           CFI Block cfiBlock103 Using cfiCommon0
           CFI Function sapp_functionEpProcess
         CODE
-//  251 {
+//  256 {
         FUNCALL sapp_functionEpProcess, osal_msg_receive
         LOCFRAME ISTACK, 0, STACK
         LOCFRAME PSTACK, 0, STACK
@@ -3911,85 +3956,85 @@ sapp_functionEpProcess:
         MOVX      @DPTR,A
         MOV       ?V6,R2
         MOV       ?V7,R3
-//  252     afIncomingMSGPacket_t *MSGpkt;
-//  253     if(events & SYS_EVENT_MSG)
+//  257     afIncomingMSGPacket_t *MSGpkt;
+//  258     if(events & SYS_EVENT_MSG)
         MOV       A,R3
         ANL       A,#0x80
         JNZ       $+5
         LJMP      ??sapp_functionEpProcess_0 & 0xFFFF
-//  254     {
-//  255         MSGpkt = (afIncomingMSGPacket_t *)osal_msg_receive( task_id );
+//  259     {
+//  260         MSGpkt = (afIncomingMSGPacket_t *)osal_msg_receive( task_id );
         ; Setup parameters for call to function osal_msg_receive
         SJMP      ??sapp_functionEpProcess_1
-//  256         while ( MSGpkt )
-//  257         {
-//  258             switch ( MSGpkt->hdr.event )
-//  259             {
-//  260             // 接收到数据包
-//  261             case AF_INCOMING_MSG_CMD:
-//  262                 {
-//  263                     switch ( MSGpkt->clusterId )
-//  264                     {
-//  265                     case SAPP_PERIODIC_CLUSTERID:
-//  266                         if(MSGpkt->endPoint <= funcCount)
-//  267                         {
-//  268                             struct ep_info_t *ep = &funcList[MSGpkt->endPoint - 1];
-//  269                             if(ep->incoming_data)
-//  270                                 (*ep->incoming_data)(ep, MSGpkt->srcAddr.addr.shortAddr, MSGpkt->srcAddr.endPoint, &MSGpkt->cmd);
-//  271                             HalLedBlink( HAL_LED_2, 1, 50, 250 );
-//  272                         }
-//  273                         
-//  274                         break;
-//  275                     }
-//  276                 }
-//  277                 break;
-//  278 
-//  279             case ZDO_STATE_CHANGE:
-//  280                 {
-//  281                     curNwkState = (devStates_t)(MSGpkt->hdr.status);
-//  282                     if ( (curNwkState == DEV_ZB_COORD)
-//  283                             || (curNwkState == DEV_ROUTER)
-//  284                             || (curNwkState == DEV_END_DEVICE) )
-//  285                     {
-//  286                         int i;
-//  287                         int hasTimeOut = 0;
-//  288                         for(i = 0; i < funcCount; i++)
-//  289                         {
-//  290                             struct ep_info_t *ep = &funcList[i];
-//  291                             if(ep->nwk_stat_change)
-//  292                                 (*ep->nwk_stat_change)(ep);
-//  293                             // 重置端点计数器
-//  294                             if(ep->time_out && ep->function.cycle)
-//  295                             {
-//  296                                 ep->timerTick = ep->function.cycle;
-//  297                                 hasTimeOut = 1;
-//  298                             }
-//  299                         }
-//  300                         if(hasTimeOut)
-//  301                         {
-//  302                             // 加入网络成功,启动定时器,为各个端点提供定时
-//  303                             osal_start_timerEx(task_id,
-//  304                                                SAPP_SEND_PERIODIC_MSG_EVT,
-//  305                                                1000);
-//  306                         }
-//  307                     }
-//  308                     else
-//  309                         osal_stop_timerEx(task_id, SAPP_SEND_PERIODIC_MSG_EVT);
-//  310                 }
-//  311                 break;
-//  312             case IOPORT_INT_EVENT:
-//  313               {
-//  314                 OSALIOIntData_t* IOIntData;
-//  315                 IOIntData =(OSALIOIntData_t*)MSGpkt;
-//  316                 if(IOIntData->endPoint <= funcCount)
+//  261         while ( MSGpkt )
+//  262         {
+//  263             switch ( MSGpkt->hdr.event )
+//  264             {
+//  265             // 接收到数据包
+//  266             case AF_INCOMING_MSG_CMD:
+//  267                 {
+//  268                     switch ( MSGpkt->clusterId )
+//  269                     {
+//  270                     case SAPP_PERIODIC_CLUSTERID:
+//  271                         if(MSGpkt->endPoint <= funcCount)
+//  272                         {
+//  273                             struct ep_info_t *ep = &funcList[MSGpkt->endPoint - 1];
+//  274                             if(ep->incoming_data)
+//  275                                 (*ep->incoming_data)(ep, MSGpkt->srcAddr.addr.shortAddr, MSGpkt->srcAddr.endPoint, &MSGpkt->cmd);
+//  276                             HalLedBlink( HAL_LED_2, 1, 50, 250 );
+//  277                         }
+//  278                         
+//  279                         break;
+//  280                     }
+//  281                 }
+//  282                 break;
+//  283 
+//  284             case ZDO_STATE_CHANGE:
+//  285                 {
+//  286                     curNwkState = (devStates_t)(MSGpkt->hdr.status);
+//  287                     if ( (curNwkState == DEV_ZB_COORD)
+//  288                             || (curNwkState == DEV_ROUTER)
+//  289                             || (curNwkState == DEV_END_DEVICE) )
+//  290                     {
+//  291                         int i;
+//  292                         int hasTimeOut = 0;
+//  293                         for(i = 0; i < funcCount; i++)
+//  294                         {
+//  295                             struct ep_info_t *ep = &funcList[i];
+//  296                             if(ep->nwk_stat_change)
+//  297                                 (*ep->nwk_stat_change)(ep);
+//  298                             // 重置端点计数器
+//  299                             if(ep->time_out && ep->function.cycle)
+//  300                             {
+//  301                                 ep->timerTick = ep->function.cycle;
+//  302                                 hasTimeOut = 1;
+//  303                             }
+//  304                         }
+//  305                         if(hasTimeOut)
+//  306                         {
+//  307                             // 加入网络成功,启动定时器,为各个端点提供定时
+//  308                             osal_start_timerEx(task_id,
+//  309                                                SAPP_SEND_PERIODIC_MSG_EVT,
+//  310                                                1000);
+//  311                         }
+//  312                     }
+//  313                     else
+//  314                         osal_stop_timerEx(task_id, SAPP_SEND_PERIODIC_MSG_EVT);
+//  315                 }
+//  316                 break;
+//  317             case IOPORT_INT_EVENT:
+//  318               {
+//  319                 OSALIOIntData_t* IOIntData;
+//  320                 IOIntData =(OSALIOIntData_t*)MSGpkt;
+//  321                 if(IOIntData->endPoint <= funcCount)
 ??sapp_functionEpProcess_2:
         INC       DPTR
         INC       DPTR
         LCALL     ?Subroutine12 & 0xFFFF
 ??CrossCallReturnLabel_13:
         JC        ??sapp_functionEpProcess_3
-//  317                 {
-//  318                     struct ep_info_t *ep = &funcList[IOIntData->endPoint - 1];
+//  322                 {
+//  323                     struct ep_info_t *ep = &funcList[IOIntData->endPoint - 1];
         MOV       DPL,?V0
         MOV       DPH,?V1
         INC       DPTR
@@ -3997,47 +4042,47 @@ sapp_functionEpProcess:
         LCALL     ?Subroutine9 & 0xFFFF
 ??CrossCallReturnLabel_7:
         LCALL     ?Subroutine3 & 0xFFFF
-//  319                     if(ep->res_available)
+//  324                     if(ep->res_available)
 ??CrossCallReturnLabel_62:
         JZ        ??sapp_functionEpProcess_3
-//  320                         (*ep->res_available)(ep, ResIOInt, IOIntData->arg);
+//  325                         (*ep->res_available)(ep, ResIOInt, IOIntData->arg);
         ; Setup parameters for indirect call
         MOV       DPL,?V0
         MOV       DPH,?V1
         LCALL     ??Subroutine39_0 & 0xFFFF
-//  321                 }
-//  322               }
+//  326                 }
+//  327               }
 ??CrossCallReturnLabel_74:
         MOV       R1,#0x5
         LCALL     ?Subroutine6 & 0xFFFF
 ??CrossCallReturnLabel_60:
         LCALL     ?CALL_IND
-//  323               break;
-//  324 #if defined(HAL_IRDEC) && (HAL_IRDEC == TRUE)
-//  325             case IRDEC_INT_EVENT:   //
-//  326               {
-//  327                 OSALIRDecIntData_t* TimerIntData = (OSALIRDecIntData_t*)MSGpkt;
-//  328                 if(TimerIntData->endPoint <= funcCount)
-//  329                 {
-//  330                     struct ep_info_t *ep = &funcList[TimerIntData->endPoint - 1];
-//  331                     if(ep->res_available)
-//  332                         (*ep->res_available)(ep, ResTimerInt, TimerIntData->data);
-//  333                 }
-//  334               }
-//  335               break;
-//  336 #endif
-//  337             default:
-//  338                 break;
-//  339             }
-//  340             // Release the memory
-//  341             osal_msg_deallocate( (uint8 *)MSGpkt );
+//  328               break;
+//  329 #if defined(HAL_IRDEC) && (HAL_IRDEC == TRUE)
+//  330             case IRDEC_INT_EVENT:   //
+//  331               {
+//  332                 OSALIRDecIntData_t* TimerIntData = (OSALIRDecIntData_t*)MSGpkt;
+//  333                 if(TimerIntData->endPoint <= funcCount)
+//  334                 {
+//  335                     struct ep_info_t *ep = &funcList[TimerIntData->endPoint - 1];
+//  336                     if(ep->res_available)
+//  337                         (*ep->res_available)(ep, ResTimerInt, TimerIntData->data);
+//  338                 }
+//  339               }
+//  340               break;
+//  341 #endif
+//  342             default:
+//  343                 break;
+//  344             }
+//  345             // Release the memory
+//  346             osal_msg_deallocate( (uint8 *)MSGpkt );
 ??sapp_functionEpProcess_3:
         ; Setup parameters for call to function osal_msg_deallocate
         MOV       R2,?V0
         MOV       R3,?V1
         LCALL     `??osal_msg_deallocate::?relay`; Banked call to: osal_msg_deallocate
-//  342             // Next - if one is available
-//  343             MSGpkt = (afIncomingMSGPacket_t *)osal_msg_receive( task_id );
+//  347             // Next - if one is available
+//  348             MSGpkt = (afIncomingMSGPacket_t *)osal_msg_receive( task_id );
         ; Setup parameters for call to function osal_msg_receive
         MOV       DPL,?XSP + 0
         MOV       DPH,?XSP + 1
@@ -4244,32 +4289,32 @@ sapp_functionEpProcess:
         MOV       R1,A
         LCALL     `??osal_stop_timerEx::?relay`; Banked call to: osal_stop_timerEx
         LJMP      ??sapp_functionEpProcess_3 & 0xFFFF
-//  344         }
-//  345         // return unprocessed events
-//  346         return (events ^ SYS_EVENT_MSG);
+//  349         }
+//  350         // return unprocessed events
+//  351         return (events ^ SYS_EVENT_MSG);
 ??sapp_functionEpProcess_4:
         MOV       R2,?V6
         MOV       A,?V7
         XRL       A,#0x80
         MOV       R3,A
         LJMP      ??sapp_functionEpProcess_15 & 0xFFFF
-//  347     }
-//  348 
-//  349     // 定时器时间到, 遍历所有端点看是否有需要调用time_out
-//  350     if(events & SAPP_SEND_PERIODIC_MSG_EVT)
+//  352     }
+//  353 
+//  354     // 定时器时间到, 遍历所有端点看是否有需要调用time_out
+//  355     if(events & SAPP_SEND_PERIODIC_MSG_EVT)
 ??sapp_functionEpProcess_0:
         MOV       A,R2
         MOV       C,0xE0 /* A   */.0
         JC        $+5
         LJMP      ??sapp_functionEpProcess_16 & 0xFFFF
-//  351     {
-//  352         int i;
-//  353         for(i = 0; i < funcCount; i++)
+//  356     {
+//  357         int i;
+//  358         for(i = 0; i < funcCount; i++)
         MOV       ?V0,#0x0
         MOV       ?V1,#0x0
         SJMP      ??sapp_functionEpProcess_17
-//  354         {
-//  355             struct ep_info_t *ep = &funcList[i];
+//  359         {
+//  360             struct ep_info_t *ep = &funcList[i];
 ??sapp_functionEpProcess_18:
         MOV       A,?V0
         MOV       B,#0x21
@@ -4284,7 +4329,7 @@ sapp_functionEpProcess:
         MOV       A,#(funcList >> 8) & 0xff
         ADDC      A,R1
         MOV       R7,A
-//  356             if(ep->time_out && ep->function.cycle)
+//  361             if(ep->time_out && ep->function.cycle)
         MOV       DPL,R6
         MOV       DPH,A
         LCALL     ??Subroutine33_0 & 0xFFFF
@@ -4304,19 +4349,19 @@ sapp_functionEpProcess:
         INC       DPTR
         MOVX      A,@DPTR
         JZ        ??sapp_functionEpProcess_19
-//  357             {
-//  358                 // 端点需要周期执行
-//  359                 ep->timerTick = ep->timerTick - 1;
+//  362             {
+//  363                 // 端点需要周期执行
+//  364                 ep->timerTick = ep->timerTick - 1;
         LCALL     ?Subroutine25 & 0xFFFF
 ??CrossCallReturnLabel_35:
         MOVX      A,@DPTR
         DEC       A
         MOVX      @DPTR,A
-//  360                 if(ep->timerTick == 0)
+//  365                 if(ep->timerTick == 0)
         JNZ       ??sapp_functionEpProcess_19
-//  361                 {
-//  362                   // 定时时间到,执行time_out函数
-//  363                   (*ep->time_out)(ep);
+//  366                 {
+//  367                   // 定时时间到,执行time_out函数
+//  368                   (*ep->time_out)(ep);
         ; Setup parameters for indirect call
         MOV       A,R6
         MOV       R2,A
@@ -4333,7 +4378,7 @@ sapp_functionEpProcess:
         LCALL     ??Subroutine31_0 & 0xFFFF
 ??CrossCallReturnLabel_57:
         LCALL     ?CALL_IND
-//  364                   ep->timerTick = ep->function.cycle;
+//  369                   ep->timerTick = ep->function.cycle;
         MOV       DPL,R6
         MOV       DPH,R7
         INC       DPTR
@@ -4350,20 +4395,20 @@ sapp_functionEpProcess:
         PUSH      A
           CFI CFA_SP SP+-1
         LCALL     ?Subroutine25 & 0xFFFF
-//  365                 }
-//  366             }
-//  367 #if 0
-//  368             if(ep->userTimer && ep->res_available)
-//  369             {
-//  370                 ep->userTimer = ep->userTimer - 1;
-//  371                 if(ep->userTimer <= 1)
-//  372                 {
-//  373                     (*ep->res_available)(ep, ResUserTimer, NULL);
-//  374                     ep->userTimer = 0;
-//  375                 }
-//  376             }
-//  377 #endif
-//  378         }
+//  370                 }
+//  371             }
+//  372 #if 0
+//  373             if(ep->userTimer && ep->res_available)
+//  374             {
+//  375                 ep->userTimer = ep->userTimer - 1;
+//  376                 if(ep->userTimer <= 1)
+//  377                 {
+//  378                     (*ep->res_available)(ep, ResUserTimer, NULL);
+//  379                     ep->userTimer = 0;
+//  380                 }
+//  381             }
+//  382 #endif
+//  383         }
 ??CrossCallReturnLabel_36:
         POP       A
           CFI CFA_SP SP+0
@@ -4377,21 +4422,21 @@ sapp_functionEpProcess:
         LCALL     ?Subroutine4 & 0xFFFF
 ??CrossCallReturnLabel_2:
         JC        ??sapp_functionEpProcess_18
-//  379         // 重新启动定时器
-//  380         osal_start_timerEx(task_id, SAPP_SEND_PERIODIC_MSG_EVT, 1000);
+//  384         // 重新启动定时器
+//  385         osal_start_timerEx(task_id, SAPP_SEND_PERIODIC_MSG_EVT, 1000);
         ; Setup parameters for call to function osal_start_timerEx
         LCALL     ?Subroutine13 & 0xFFFF
-//  381         // return unprocessed events
-//  382         return (events ^ SAPP_SEND_PERIODIC_MSG_EVT);
+//  386         // return unprocessed events
+//  387         return (events ^ SAPP_SEND_PERIODIC_MSG_EVT);
 ??CrossCallReturnLabel_71:
         MOV       A,?V6
         XRL       A,#0x1
         MOV       R2,A
         MOV       R3,?V7
         SJMP      ??sapp_functionEpProcess_15
-//  383     }
-//  384     // Discard unknown events
-//  385     return 0;
+//  388     }
+//  389     // Discard unknown events
+//  390     return 0;
 ??sapp_functionEpProcess_16:
         MOV       R2,#0x0
         MOV       R3,#0x0
@@ -4401,7 +4446,7 @@ sapp_functionEpProcess:
           CFI CFA_XSP16 add(XSP16, 16)
         MOV       R7,#0x8
         LJMP      ?BANKED_LEAVE_XDATA
-//  386 }
+//  391 }
           CFI EndBlock cfiBlock103
 
         RSEG BANKED_CODE:HUGECODE:NOROOT(0)
@@ -4973,50 +5018,50 @@ sapp_functionEpProcess:
           CFI EndBlock cfiCond131
           CFI EndBlock cfiCond132
           CFI EndBlock cfiPicker133
-//  387 //处理接收到的wifi模块串口数据
-//  388 static uint8 uartMsgProcesser1(uint8 *msg)
-//  389 {
-//  390   /*
-//  391     uint8 length = 0;
-//  392     mtOSALSerialData_t *pMsg = (mtOSALSerialData_t *)msg;
-//  393     mtUserSerialMsg_t *pMsgBody = (mtUserSerialMsg_t *)pMsg->msg;
-//  394     if ( (curNwkState != DEV_ZB_COORD)
-//  395             && (curNwkState != DEV_ROUTER)
-//  396             && (curNwkState != DEV_END_DEVICE) )
-//  397         return 1;
-//  398     
-//  399     while((&pMsgBody->sop)[length++]!='\n'&&length<pMsgBody->len);
-//  400     HalUARTWrite(0,&pMsgBody->sop,length);
-//  401     HalLedBlink( HAL_LED_1, 3, 50, 90 );
-//  402 */
-//  403     uint8 length = 0;
-//  404     mtOSALSerialData_t *pMsg = (mtOSALSerialData_t *)msg;
-//  405     mtUserSerialMsg_t *pMsgBody = (mtUserSerialMsg_t *)pMsg->msg;
-//  406     while((&pMsgBody->sop)[length++]!='\n'&&length<pMsgBody->len);
-//  407     SendData(TRANSFER_ENDPOINT,&pMsgBody->sop,0x0000, 1,length);
-//  408     return 1;
-//  409 }
-//  410 
-//  411 #if defined(ZDO_COORDINATOR)
-//  412 static uint8 uartMsgProcesser(uint8 *msg)
-//  413 {
-//  414     uint8 length = 0;
-//  415     mtOSALSerialData_t *pMsg = (mtOSALSerialData_t *)msg;
-//  416     mtUserSerialMsg_t *pMsgBody = (mtUserSerialMsg_t *)pMsg->msg;
-//  417     while((&pMsgBody->sop)[length++]!='\n'&&length<pMsgBody->len);
-//  418     SendData(TRANSFER_ENDPOINT,&pMsgBody->sop,0xFFFF, 1,length);
-//  419     return 1;
-//  420 }
-//  421 #endif
-//  422 
+//  392 //处理接收到的wifi模块串口数据
+//  393 static uint8 uartMsgProcesser1(uint8 *msg)
+//  394 {
+//  395   /*
+//  396     uint8 length = 0;
+//  397     mtOSALSerialData_t *pMsg = (mtOSALSerialData_t *)msg;
+//  398     mtUserSerialMsg_t *pMsgBody = (mtUserSerialMsg_t *)pMsg->msg;
+//  399     if ( (curNwkState != DEV_ZB_COORD)
+//  400             && (curNwkState != DEV_ROUTER)
+//  401             && (curNwkState != DEV_END_DEVICE) )
+//  402         return 1;
+//  403     
+//  404     while((&pMsgBody->sop)[length++]!='\n'&&length<pMsgBody->len);
+//  405     HalUARTWrite(0,&pMsgBody->sop,length);
+//  406     HalLedBlink( HAL_LED_1, 3, 50, 90 );
+//  407 */
+//  408     uint8 length = 0;
+//  409     mtOSALSerialData_t *pMsg = (mtOSALSerialData_t *)msg;
+//  410     mtUserSerialMsg_t *pMsgBody = (mtUserSerialMsg_t *)pMsg->msg;
+//  411     while((&pMsgBody->sop)[length++]!='\n'&&length<pMsgBody->len);
+//  412     SendData(TRANSFER_ENDPOINT,&pMsgBody->sop,0x0000, 1,length);
+//  413     return 1;
+//  414 }
+//  415 
+//  416 #if defined(ZDO_COORDINATOR)
+//  417 static uint8 uartMsgProcesser(uint8 *msg)
+//  418 {
+//  419     uint8 length = 0;
+//  420     mtOSALSerialData_t *pMsg = (mtOSALSerialData_t *)msg;
+//  421     mtUserSerialMsg_t *pMsgBody = (mtUserSerialMsg_t *)pMsg->msg;
+//  422     while((&pMsgBody->sop)[length++]!='\n'&&length<pMsgBody->len);
+//  423     SendData(TRANSFER_ENDPOINT,&pMsgBody->sop,0xFFFF, 1,length);
+//  424     return 1;
+//  425 }
+//  426 #endif
+//  427 
 
         RSEG BANKED_CODE:HUGECODE:NOROOT(0)
-//  423 uint8 SendData(uint8 srcEP, const void *buf, uint16 addr, uint8 dstEP, uint8 Len)
+//  428 uint8 SendData(uint8 srcEP, const void *buf, uint16 addr, uint8 dstEP, uint8 Len)
 SendData:
           CFI Block cfiBlock134 Using cfiCommon0
           CFI Function SendData
         CODE
-//  424 {
+//  429 {
         FUNCALL SendData, AF_DataRequest
         LOCFRAME ISTACK, 0, STACK
         LOCFRAME PSTACK, 0, STACK
@@ -5068,17 +5113,17 @@ SendData:
         MOV       R6,A
         MOV       ?V0,R2
         MOV       ?V1,R3
-//  425     static uint8 transID = 0;
-//  426     afAddrType_t SendDataAddr;
-//  427     struct ep_info_t *epInfo;
-//  428 
-//  429     if(srcEP <= funcCount)
+//  430     static uint8 transID = 0;
+//  431     afAddrType_t SendDataAddr;
+//  432     struct ep_info_t *epInfo;
+//  433 
+//  434     if(srcEP <= funcCount)
         MOV       DPTR,#funcCount
         MOVX      A,@DPTR
         CLR       C
         SUBB      A,R6
         JC        ??SendData_0
-//  430         epInfo = &funcList[srcEP - 1];
+//  435         epInfo = &funcList[srcEP - 1];
         MOV       A,R1
         MOV       B,#0x21
         MUL       AB
@@ -5095,19 +5140,19 @@ SendData:
         MOV       A,R1
         MOV       R3,A
         SJMP      ??SendData_1
-//  431     else
-//  432         epInfo = &controlEndPointInfo;
+//  436     else
+//  437         epInfo = &controlEndPointInfo;
 ??SendData_0:
         MOV       R2,#controlEndPointInfo & 0xff
         MOV       R3,#(controlEndPointInfo >> 8) & 0xff
-//  433 
-//  434     SendDataAddr.addrMode = (afAddrMode_t)Addr16Bit;         //短地址发送
+//  438 
+//  439     SendDataAddr.addrMode = (afAddrMode_t)Addr16Bit;         //短地址发送
 ??SendData_1:
         MOV       A,#0x8
         LCALL     ?XSTACK_DISP0_8
         MOV       A,#0x2
         MOVX      @DPTR,A
-//  435     SendDataAddr.endPoint = dstEP;
+//  440     SendDataAddr.endPoint = dstEP;
         MOV       A,#0x18
         LCALL     ?XSTACK_DISP0_8
         MOVX      A,@DPTR
@@ -5118,7 +5163,7 @@ SendData:
         POP       A
           CFI CFA_SP SP+0
         MOVX      @DPTR,A
-//  436     SendDataAddr.addr.shortAddr = addr;
+//  441     SendDataAddr.addr.shortAddr = addr;
         MOV       DPL,?XSP + 0
         MOV       DPH,?XSP + 1
         MOV       A,R4
@@ -5126,15 +5171,15 @@ SendData:
         INC       DPTR
         MOV       A,R5
         MOVX      @DPTR,A
-//  437     if ( AF_DataRequest( &SendDataAddr, //发送的地址和模式
-//  438                          // TODO:
-//  439                          &epInfo->SampleApp_epDesc,   //终端（比如操作系统中任务ID等）
-//  440                          SAPP_PERIODIC_CLUSTERID,//发送串ID
-//  441                          Len,
-//  442                          (uint8*)buf,
-//  443                          &transID,  //信息ID（操作系统参数）
-//  444                          AF_DISCV_ROUTE,
-//  445                          AF_DEFAULT_RADIUS ) == afStatus_SUCCESS )
+//  442     if ( AF_DataRequest( &SendDataAddr, //发送的地址和模式
+//  443                          // TODO:
+//  444                          &epInfo->SampleApp_epDesc,   //终端（比如操作系统中任务ID等）
+//  445                          SAPP_PERIODIC_CLUSTERID,//发送串ID
+//  446                          Len,
+//  447                          (uint8*)buf,
+//  448                          &transID,  //信息ID（操作系统参数）
+//  449                          AF_DISCV_ROUTE,
+//  450                          AF_DEFAULT_RADIUS ) == afStatus_SUCCESS )
         ; Setup parameters for call to function AF_DataRequest
         MOV       ?V2,#0x1e
         MOV       R0,#?V2
@@ -5175,8 +5220,8 @@ SendData:
           CFI CFA_XSP16 add(XSP16, 24)
         MOV       A,R1
         JNZ       ??SendData_2
-//  446     {
-//  447         HalLedBlink( HAL_LED_1, 1, 50, 250 );
+//  451     {
+//  452         HalLedBlink( HAL_LED_1, 1, 50, 250 );
         ; Setup parameters for call to function HalLedBlink
         MOV       R4,#-0x6
         MOV       R5,#0x0
@@ -5184,13 +5229,13 @@ SendData:
         MOV       R2,#0x1
         MOV       R1,#0x1
         LCALL     `??HalLedBlink::?relay`; Banked call to: HalLedBlink
-//  448         return 1;
+//  453         return 1;
         MOV       R1,#0x1
         SJMP      ??SendData_3
-//  449     }
-//  450     else
-//  451     {
-//  452         return 0;
+//  454     }
+//  455     else
+//  456     {
+//  457         return 0;
 ??SendData_2:
         MOV       R1,#0x0
 ??SendData_3:
@@ -5199,8 +5244,8 @@ SendData:
           CFI CFA_XSP16 add(XSP16, 12)
         MOV       R7,#0x4
         LJMP      ?BANKED_LEAVE_XDATA
-//  453     }
-//  454 }
+//  458     }
+//  459 }
           CFI EndBlock cfiBlock134
 
         RSEG XDATA_Z:XDATA:NOROOT(0)
@@ -5208,15 +5253,15 @@ SendData:
 ??transID:
         DS 1
         REQUIRE __INIT_XDATA_Z
-//  455 
+//  460 
 
         RSEG BANKED_CODE:HUGECODE:NOROOT(0)
-//  456 void CreateUserTimer(struct ep_info_t *ep, uint8 seconds)
+//  461 void CreateUserTimer(struct ep_info_t *ep, uint8 seconds)
 CreateUserTimer:
           CFI Block cfiBlock135 Using cfiCommon0
           CFI Function CreateUserTimer
         CODE
-//  457 {
+//  462 {
         FUNCALL CreateUserTimer, osal_start_timerEx
         LOCFRAME ISTACK, 0, STACK
         LOCFRAME PSTACK, 0, STACK
@@ -5245,31 +5290,31 @@ CreateUserTimer:
         ; Auto size: 0
         MOV       A,R1
         MOV       R6,A
-//  458     if(ep == NULL)
+//  463     if(ep == NULL)
         MOV       A,R2
         ORL       A,R3
         JZ        ??CreateUserTimer_0
-//  459         return;
-//  460     if(ep->res_available == NULL)
+//  464         return;
+//  465     if(ep->res_available == NULL)
         MOV       DPL,R2
         MOV       DPH,R3
         LCALL     ??Subroutine32_0 & 0xFFFF
 ??CrossCallReturnLabel_69:
         JZ        ??CreateUserTimer_0
-//  461         return;
-//  462     ep->userTimer = seconds;
+//  466         return;
+//  467     ep->userTimer = seconds;
         LCALL     ?Subroutine28 & 0xFFFF
 ??CrossCallReturnLabel_42:
         MOV       A,R6
         MOVX      @DPTR,A
-//  463     if(isUserTimerRunning == 0)
+//  468     if(isUserTimerRunning == 0)
         MOV       DPTR,#isUserTimerRunning
         MOVX      A,@DPTR
         JNZ       ??CreateUserTimer_0
-//  464     {
-//  465         osal_start_timerEx(controlTaskId,
-//  466                            SAPP_SEND_PERIODIC_MSG_EVT,
-//  467                            1000);
+//  469     {
+//  470         osal_start_timerEx(controlTaskId,
+//  471                            SAPP_SEND_PERIODIC_MSG_EVT,
+//  472                            1000);
         ; Setup parameters for call to function osal_start_timerEx
         MOV       R4,#-0x18
         MOV       R5,#0x3
@@ -5277,13 +5322,13 @@ CreateUserTimer:
         MOV       R3,#0x0
         MOV       DPTR,#controlTaskId
         LCALL     ??Subroutine36_0 & 0xFFFF
-//  468         isUserTimerRunning = 1;
+//  473         isUserTimerRunning = 1;
 ??CrossCallReturnLabel_72:
         MOV       DPTR,#isUserTimerRunning
         MOV       A,#0x1
         MOVX      @DPTR,A
-//  469     }
-//  470 }
+//  474     }
+//  475 }
 ??CreateUserTimer_0:
           CFI EndBlock cfiBlock135
         REQUIRE ?Subroutine1
@@ -5399,15 +5444,15 @@ CreateUserTimer:
           CFI EndBlock cfiCond140
           CFI EndBlock cfiCond141
           CFI EndBlock cfiPicker142
-//  471 
+//  476 
 
         RSEG BANKED_CODE:HUGECODE:NOROOT(0)
-//  472 void DeleteUserTimer(struct ep_info_t *ep)
+//  477 void DeleteUserTimer(struct ep_info_t *ep)
 DeleteUserTimer:
           CFI Block cfiBlock143 Using cfiCommon0
           CFI Function DeleteUserTimer
         CODE
-//  473 {
+//  478 {
         PUSH      DPL
           CFI DPL0 Frame(CFA_SP, 4)
           CFI CFA_SP SP+-4
@@ -5416,14 +5461,14 @@ DeleteUserTimer:
           CFI CFA_SP SP+-5
         ; Saved register size: 2
         ; Auto size: 0
-//  474     if(ep == NULL)
+//  479     if(ep == NULL)
         MOV       A,R2
         ORL       A,R3
         JZ        ??CrossCallReturnLabel_25
-//  475         return;
-//  476     ep->userTimer = 0;
+//  480         return;
+//  481     ep->userTimer = 0;
         LCALL     ?Subroutine19 & 0xFFFF
-//  477 }
+//  482 }
 ??CrossCallReturnLabel_25:
           CFI EndBlock cfiBlock143
         REQUIRE ?Subroutine2
@@ -5479,15 +5524,15 @@ DeleteUserTimer:
           CFI EndBlock cfiCond145
           CFI EndBlock cfiCond146
           CFI EndBlock cfiPicker147
-//  478 
+//  483 
 
         RSEG BANKED_CODE:HUGECODE:NOROOT(0)
-//  479 void ModifyRefreshCycle(struct ep_info_t *ep, uint8 seconds)
+//  484 void ModifyRefreshCycle(struct ep_info_t *ep, uint8 seconds)
 ModifyRefreshCycle:
           CFI Block cfiBlock148 Using cfiCommon0
           CFI Function ModifyRefreshCycle
         CODE
-//  480 {
+//  485 {
         PUSH      DPL
           CFI DPL0 Frame(CFA_SP, 4)
           CFI CFA_SP SP+-4
@@ -5496,12 +5541,12 @@ ModifyRefreshCycle:
           CFI CFA_SP SP+-5
         ; Saved register size: 2
         ; Auto size: 0
-//  481     if(ep == NULL)
+//  486     if(ep == NULL)
         MOV       A,R2
         ORL       A,R3
         JZ        ??ModifyRefreshCycle_0
-//  482         return;
-//  483     if(ep->time_out == NULL)
+//  487         return;
+//  488     if(ep->time_out == NULL)
         MOV       DPL,R2
         MOV       DPH,R3
         LCALL     ??Subroutine38_0 & 0xFFFF
@@ -5509,8 +5554,8 @@ ModifyRefreshCycle:
         MOV       A,R4
         ORL       A,R5
         JZ        ??ModifyRefreshCycle_0
-//  484         return;
-//  485     ep->function.cycle = seconds;
+//  489         return;
+//  490     ep->function.cycle = seconds;
         MOV       A,R1
         MOV       DPL,R2
         MOV       DPH,R3
@@ -5525,7 +5570,7 @@ ModifyRefreshCycle:
         INC       DPTR
         INC       DPTR
         MOVX      @DPTR,A
-//  486     if(ep->timerTick > seconds)
+//  491     if(ep->timerTick > seconds)
         LCALL     ?Subroutine24 & 0xFFFF
 ??CrossCallReturnLabel_34:
         MOVX      A,@DPTR
@@ -5534,10 +5579,10 @@ ModifyRefreshCycle:
         CLR       C
         SUBB      A,R0
         JNC       ??ModifyRefreshCycle_0
-//  487         ep->timerTick = seconds;
+//  492         ep->timerTick = seconds;
         MOV       A,R1
         MOVX      @DPTR,A
-//  488 }
+//  493 }
 ??ModifyRefreshCycle_0:
         SJMP      ?Subroutine2
           CFI EndBlock cfiBlock148
@@ -6094,17 +6139,17 @@ ModifyRefreshCycle:
           CFI EndBlock cfiCond179
           CFI EndBlock cfiCond180
           CFI EndBlock cfiPicker181
-//  489 
-//  490 #if ! defined(ZDO_COORDINATOR) && defined(RTR_NWK)
-//  491 //路由器定时发送拓扑信息
+//  494 
+//  495 #if ! defined(ZDO_COORDINATOR) && defined(RTR_NWK)
+//  496 //路由器定时发送拓扑信息
 
         RSEG BANKED_CODE:HUGECODE:NOROOT(0)
-//  492 void RouterTimeoutRoutine(struct ep_info_t *ep)
+//  497 void RouterTimeoutRoutine(struct ep_info_t *ep)
 RouterTimeoutRoutine:
           CFI Block cfiBlock182 Using cfiCommon0
           CFI Function RouterTimeoutRoutine
         CODE
-//  493 {
+//  498 {
         FUNCALL RouterTimeoutRoutine, SendData
         LOCFRAME ISTACK, 0, STACK
         LOCFRAME PSTACK, 0, STACK
@@ -6136,7 +6181,7 @@ RouterTimeoutRoutine:
         MOV       R6,A
         MOV       A,R3
         MOV       R7,A
-//  494     SendData(ep->ep, (unsigned char *)&topoBuffer, 0x0000, TRANSFER_ENDPOINT, sizeof(TOPOINFO)); //节点向协调器发送拓扑信息
+//  499     SendData(ep->ep, (unsigned char *)&topoBuffer, 0x0000, TRANSFER_ENDPOINT, sizeof(TOPOINFO)); //节点向协调器发送拓扑信息
         ; Setup parameters for call to function SendData
         MOV       ?V0,#0xe
         MOV       R0,#?V0
@@ -6162,7 +6207,7 @@ RouterTimeoutRoutine:
 ??CrossCallReturnLabel_83:
         LCALL     ?DEALLOC_XSTACK8
           CFI CFA_XSP16 add(XSP16, 9)
-//  495 }
+//  500 }
         LJMP      ?Subroutine1 & 0xFFFF
           CFI EndBlock cfiBlock182
 
@@ -6300,10 +6345,10 @@ RouterTimeoutRoutine:
           CFI EndBlock cfiCond188
           CFI EndBlock cfiCond189
           CFI EndBlock cfiPicker190
-//  496 //路由器收到广播后向所有连接wifi的设备广播信息
+//  501 //路由器收到广播后向所有连接wifi的设备广播信息
 
         RSEG BANKED_CODE:HUGECODE:NOROOT(0)
-//  497 void RouterIncomingRoutine(struct ep_info_t *ep, uint16 addr, uint8 endPoint, afMSGCommandFormat_t *msg){
+//  502 void RouterIncomingRoutine(struct ep_info_t *ep, uint16 addr, uint8 endPoint, afMSGCommandFormat_t *msg){
 RouterIncomingRoutine:
           CFI Block cfiBlock191 Using cfiCommon0
           CFI Function RouterIncomingRoutine
@@ -6345,7 +6390,7 @@ RouterIncomingRoutine:
         INC       DPTR
         MOVX      A,@DPTR
         MOV       R1,A
-//  498     HalUARTWrite(0,msg->Data,msg->DataLength);
+//  503     HalUARTWrite(0,msg->Data,msg->DataLength);
         ; Setup parameters for call to function HalUARTWrite
         MOV       DPL,R0
         MOV       DPH,A
@@ -6363,7 +6408,7 @@ RouterIncomingRoutine:
         MOV       R3,A
         MOV       R1,#0x0
         LCALL     `??HalUARTWrite::?relay`; Banked call to: HalUARTWrite
-//  499     HalLedBlink( HAL_LED_2, 3, 50, 90 );
+//  504     HalLedBlink( HAL_LED_2, 3, 50, 90 );
         ; Setup parameters for call to function HalLedBlink
         MOV       R4,#0x5a
         MOV       R5,#0x0
@@ -6371,9 +6416,9 @@ RouterIncomingRoutine:
         MOV       R2,#0x3
         MOV       R1,#0x2
         LCALL     `??HalLedBlink::?relay`; Banked call to: HalLedBlink
-//  500      //Delay_ms(5);
-//  501 
-//  502 }
+//  505      //Delay_ms(5);
+//  506 
+//  507 }
         LJMP      ?Subroutine2 & 0xFFFF
           CFI EndBlock cfiBlock191
 
@@ -6471,43 +6516,43 @@ RouterIncomingRoutine:
         DC24    RouterIncomingRoutine
 
         END
-//  503 #endif
-//  504 
-//  505 #if defined(ZDO_COORDINATOR)
-//  506 void CoordinatorTimeoutRoutine(struct ep_info_t *ep){
-//  507      SendData(ep->ep, (unsigned char *)&topoBuffer, 0x0000, TRANSFER_ENDPOINT, sizeof(TOPOINFO)); //节点向协调器发送拓扑信息
-//  508 }
-//  509 //协调器收到求救信息后向连接wifi的服务器发送信息
-//  510 void CoordinatorIncomingRoutine(struct ep_info_t *ep, uint16 addr, uint8 endPoint, afMSGCommandFormat_t *msg)
-//  511 {
-//  512     //msg->Data[], msg->DataLength, msg->TransSeqNumber
-//  513     // 转发数据到串口
-//  514   /*
-//  515     if(msg->DataLength > 0)
-//  516     {
-//  517         mtUserSerialMsg_t *pMsg = osal_mem_alloc(sizeof(mtUserSerialMsg_t) + msg->DataLength - 1);
-//  518         pMsg->sop = MT_UART_SOF;
-//  519         pMsg->len = msg->DataLength + 6;
-//  520         pMsg->cmd = 0x0018;
-//  521         pMsg->cmdEndPoint = 0xF1;
-//  522         pMsg->addr = addr;
-//  523         pMsg->endPoint = endPoint;
-//  524         memcpy(pMsg->data, msg->Data, msg->DataLength);
-//  525         pMsg->fsc = MT_UartCalcFCS(0, &pMsg->len, 1);
-//  526         pMsg->fsc = MT_UartCalcFCS(pMsg->fsc, pMsg->dataBody, pMsg->len);
-//  527         HalUARTWrite(HAL_UART_PORT_0, &pMsg->sop, sizeof(mtUserSerialMsg_t) - 2 + msg->DataLength);
-//  528         HalUARTWrite(HAL_UART_PORT_0, &pMsg->fsc, 1);
-//  529         osal_mem_free(pMsg);
-//  530     }
-//  531 */
-//  532     HalUARTWrite(0,msg->Data,msg->DataLength);
-//  533     HalLedBlink( HAL_LED_2, 2, 50, 90 );
-//  534   
-//  535 }
-//  536 #endif
-//  537 #endif//SAPP_ZSTACK
+//  508 #endif
+//  509 
+//  510 #if defined(ZDO_COORDINATOR)
+//  511 void CoordinatorTimeoutRoutine(struct ep_info_t *ep){
+//  512      SendData(ep->ep, (unsigned char *)&topoBuffer, 0x0000, TRANSFER_ENDPOINT, sizeof(TOPOINFO)); //节点向协调器发送拓扑信息
+//  513 }
+//  514 //协调器收到求救信息后向连接wifi的服务器发送信息
+//  515 void CoordinatorIncomingRoutine(struct ep_info_t *ep, uint16 addr, uint8 endPoint, afMSGCommandFormat_t *msg)
+//  516 {
+//  517     //msg->Data[], msg->DataLength, msg->TransSeqNumber
+//  518     // 转发数据到串口
+//  519   /*
+//  520     if(msg->DataLength > 0)
+//  521     {
+//  522         mtUserSerialMsg_t *pMsg = osal_mem_alloc(sizeof(mtUserSerialMsg_t) + msg->DataLength - 1);
+//  523         pMsg->sop = MT_UART_SOF;
+//  524         pMsg->len = msg->DataLength + 6;
+//  525         pMsg->cmd = 0x0018;
+//  526         pMsg->cmdEndPoint = 0xF1;
+//  527         pMsg->addr = addr;
+//  528         pMsg->endPoint = endPoint;
+//  529         memcpy(pMsg->data, msg->Data, msg->DataLength);
+//  530         pMsg->fsc = MT_UartCalcFCS(0, &pMsg->len, 1);
+//  531         pMsg->fsc = MT_UartCalcFCS(pMsg->fsc, pMsg->dataBody, pMsg->len);
+//  532         HalUARTWrite(HAL_UART_PORT_0, &pMsg->sop, sizeof(mtUserSerialMsg_t) - 2 + msg->DataLength);
+//  533         HalUARTWrite(HAL_UART_PORT_0, &pMsg->fsc, 1);
+//  534         osal_mem_free(pMsg);
+//  535     }
+//  536 */
+//  537     HalUARTWrite(0,msg->Data,msg->DataLength);
+//  538     HalLedBlink( HAL_LED_2, 2, 50, 90 );
+//  539   
+//  540 }
+//  541 #endif
+//  542 #endif//SAPP_ZSTACK
 // 
-// 2 583 bytes in segment BANKED_CODE
+// 2 601 bytes in segment BANKED_CODE
 //    60 bytes in segment BANK_RELAYS
 //    16 bytes in segment XDATA_I
 //    16 bytes in segment XDATA_ID
@@ -6516,7 +6561,7 @@ RouterIncomingRoutine:
 // 
 //    76 bytes of CODE     memory
 //     3 bytes of CONST    memory
-// 2 583 bytes of HUGECODE memory
+// 2 601 bytes of HUGECODE memory
 //    56 bytes of XDATA    memory
 //
 //Errors: none

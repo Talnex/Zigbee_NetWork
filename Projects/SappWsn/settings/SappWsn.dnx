@@ -12,7 +12,7 @@
         <ByteLimit>50</ByteLimit>
     </Stack>
     <DebugChecksum>
-        <Checksum>1538342139</Checksum>
+        <Checksum>797559419</Checksum>
     </DebugChecksum>
     <CallStack>
         <ShowArgs>0</ShowArgs>
@@ -74,13 +74,6 @@
         <Freq>50000000</Freq>
         <FreqHi>0</FreqHi>
     </Simulator>
-    <Breakpoints>
-        <Count>0</Count>
-    </Breakpoints>
-    <ChipconEmu>
-        <StopTimersOnHalt>0</StopTimersOnHalt>
-        <LeaveTargetRunning>1</LeaveTargetRunning>
-    </ChipconEmu>
     <LogFile>
         <LoggingEnabled>_ 0</LoggingEnabled>
         <LogFile>_ ""</LogFile>
@@ -90,8 +83,15 @@
         <LoggingEnabled>_ 0</LoggingEnabled>
         <LogFile>_ ""</LogFile>
     </TermIOLog>
+    <Breakpoints>
+        <Count>0</Count>
+    </Breakpoints>
+    <ChipconEmu>
+        <StopTimersOnHalt>0</StopTimersOnHalt>
+        <LeaveTargetRunning>1</LeaveTargetRunning>
+    </ChipconEmu>
     <Aliases>
-        <A0>_ "C:\Users\Administrator\Desktop\111 - 副本\ZStack-CC2530-r200\Projects\zstack\ZMain\TI2530DB\ZMain.c" "D:\课设勿动\ZStack-CC2530-r200\Projects\zstack\ZMain\TI2530DB\ZMain.c"</A0>
+        <A0>_ "C:\Users\Administrator\Desktop\111 - 副本\ZStack-CC2530-r200\Projects\zstack\ZMain\TI2530DB\ZMain.c" "D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Projects\zstack\ZMain\TI2530DB\ZMain.c"</A0>
         <Count>1</Count>
         <SuppressDialog>1</SuppressDialog>
     </Aliases>

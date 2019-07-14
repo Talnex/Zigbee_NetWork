@@ -66,10 +66,10 @@ void sapp_taskInitProcess(void)
         if(ep->res_available)
           (*ep->res_available)(ep, ResInit, NULL);
     }
-#if defined(ZDO_COORDINATOR)// || defined(RTR_NWK)
+//#if defined(ZDO_COORDINATOR)// || defined(RTR_NWK)
 //    RegisterForKeys( SampleApp_TaskID );
     MT_UartRegisterTaskID(controlTaskId);
-#endif
+//#endif
 }
 /*********************************************************************
  * LOCAL FUNCTIONS
@@ -109,9 +109,11 @@ uint16 sapp_controlEpProcess(uint8 task_id, uint16 events)
 
     if ( events & SYS_EVENT_MSG )
     {
+        //HalLedBlink( HAL_LED_1, 2, 50, 90 );
         MSGpkt = (afIncomingMSGPacket_t *)osal_msg_receive(task_id);
         while ( MSGpkt )
         {
+            //HalUARTWrite(0, &MSGpkt->hdr.event,1);
             switch ( MSGpkt->hdr.event )
             {
 #if defined(ZDO_COORDINATOR)
@@ -119,9 +121,12 @@ uint16 sapp_controlEpProcess(uint8 task_id, uint16 events)
                 uartMsgProcesser((uint8 *)MSGpkt);
                 HalLedBlink( HAL_LED_1, 2, 50, 90 );
                 break;
-#else
+#endif
+
+#if ! defined(ZDO_COORDINATOR) && defined(RTR_NWK)
             case CMD_SERIAL_MSG:
                 uartMsgProcesser1((uint8 *)MSGpkt);
+                HalLedBlink( HAL_LED_1, 2, 50, 90 );
                 break;
 #endif
                 // Received when a messages is received (OTA) for this endpoint

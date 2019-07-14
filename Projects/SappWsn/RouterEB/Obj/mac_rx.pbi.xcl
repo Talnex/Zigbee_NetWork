@@ -1,49 +1,49 @@
-"C:\Users\Administrator\Desktop\111 - 副本\ZStack-CC2530-r200\Components\mac\low_level\srf04\mac_rx.c"
+"D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Components\mac\low_level\srf04\mac_rx.c"
 -std=c99
 -ferror-limit=0
 -fbracket-depth=512
 -I
-C:\Users\Administrator\Desktop\111 - 副本\ZStack-CC2530-r200\Projects\SappWsn
+D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Projects\SappWsn
 -I
-C:\Users\Administrator\Desktop\111 - 副本\ZStack-CC2530-r200\Projects\SappWsn\Source
+D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Projects\SappWsn\Source
 -I
-C:\Users\Administrator\Desktop\111 - 副本\ZStack-CC2530-r200\Projects\SappWsn\..\zstack\ZMain\TI2530DB
+D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Projects\SappWsn\..\zstack\ZMain\TI2530DB
 -I
-C:\Users\Administrator\Desktop\111 - 副本\ZStack-CC2530-r200\Projects\SappWsn\..\..\Components\hal\include
+D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Projects\SappWsn\..\..\Components\hal\include
 -I
-C:\Users\Administrator\Desktop\111 - 副本\ZStack-CC2530-r200\Projects\SappWsn\..\..\Components\hal\target\CC2530EB
+D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Projects\SappWsn\..\..\Components\hal\target\CC2530EB
 -I
-C:\Users\Administrator\Desktop\111 - 副本\ZStack-CC2530-r200\Projects\SappWsn\..\..\Components\mac\include
+D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Projects\SappWsn\..\..\Components\mac\include
 -I
-C:\Users\Administrator\Desktop\111 - 副本\ZStack-CC2530-r200\Projects\SappWsn\..\..\Components\mac\high_level
+D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Projects\SappWsn\..\..\Components\mac\high_level
 -I
-C:\Users\Administrator\Desktop\111 - 副本\ZStack-CC2530-r200\Projects\SappWsn\..\..\Components\mac\low_level\srf04
+D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Projects\SappWsn\..\..\Components\mac\low_level\srf04
 -I
-C:\Users\Administrator\Desktop\111 - 副本\ZStack-CC2530-r200\Projects\SappWsn\..\..\Components\mac\low_level\srf04\single_chip
+D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Projects\SappWsn\..\..\Components\mac\low_level\srf04\single_chip
 -I
-C:\Users\Administrator\Desktop\111 - 副本\ZStack-CC2530-r200\Projects\SappWsn\..\..\Components\mt
+D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Projects\SappWsn\..\..\Components\mt
 -I
-C:\Users\Administrator\Desktop\111 - 副本\ZStack-CC2530-r200\Projects\SappWsn\..\..\Components\osal\include
+D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Projects\SappWsn\..\..\Components\osal\include
 -I
-C:\Users\Administrator\Desktop\111 - 副本\ZStack-CC2530-r200\Projects\SappWsn\..\..\Components\services\saddr
+D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Projects\SappWsn\..\..\Components\services\saddr
 -I
-C:\Users\Administrator\Desktop\111 - 副本\ZStack-CC2530-r200\Projects\SappWsn\..\..\Components\services\sdata
+D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Projects\SappWsn\..\..\Components\services\sdata
 -I
-C:\Users\Administrator\Desktop\111 - 副本\ZStack-CC2530-r200\Projects\SappWsn\..\..\Components\stack\af
+D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Projects\SappWsn\..\..\Components\stack\af
 -I
-C:\Users\Administrator\Desktop\111 - 副本\ZStack-CC2530-r200\Projects\SappWsn\..\..\Components\stack\nwk
+D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Projects\SappWsn\..\..\Components\stack\nwk
 -I
-C:\Users\Administrator\Desktop\111 - 副本\ZStack-CC2530-r200\Projects\SappWsn\..\..\Components\stack\sapi
+D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Projects\SappWsn\..\..\Components\stack\sapi
 -I
-C:\Users\Administrator\Desktop\111 - 副本\ZStack-CC2530-r200\Projects\SappWsn\..\..\Components\stack\sec
+D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Projects\SappWsn\..\..\Components\stack\sec
 -I
-C:\Users\Administrator\Desktop\111 - 副本\ZStack-CC2530-r200\Projects\SappWsn\..\..\Components\stack\sys
+D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Projects\SappWsn\..\..\Components\stack\sys
 -I
-C:\Users\Administrator\Desktop\111 - 副本\ZStack-CC2530-r200\Projects\SappWsn\..\..\Components\stack\zdo
+D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Projects\SappWsn\..\..\Components\stack\zdo
 -I
-C:\Users\Administrator\Desktop\111 - 副本\ZStack-CC2530-r200\Projects\SappWsn\..\..\Components\zmac
+D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Projects\SappWsn\..\..\Components\zmac
 -I
-C:\Users\Administrator\Desktop\111 - 副本\ZStack-CC2530-r200\Projects\SappWsn\..\..\Components\zmac\f8w
+D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Projects\SappWsn\..\..\Components\zmac\f8w
 -I
 C:\Program Files\IAR Systems\Embedded Workbench 8.0\8051\inc
 -I
@@ -51,47 +51,47 @@ C:\Program Files\IAR Systems\Embedded Workbench 8.0\8051\lib\dlib
 -I
 C:\Program Files\IAR Systems\Embedded Workbench 8.0\8051\inc\clib
 -I
-C:\Users\Administrator\Desktop\111 - 副本\ZStack-CC2530-r200\Projects\SappWsn
+D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Projects\SappWsn
 -I
-C:\Users\Administrator\Desktop\111 - 副本\ZStack-CC2530-r200\Projects\SappWsn\Source
+D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Projects\SappWsn\Source
 -I
-C:\Users\Administrator\Desktop\111 - 副本\ZStack-CC2530-r200\Projects\zstack\ZMain\TI2530DB
+D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Projects\zstack\ZMain\TI2530DB
 -I
-C:\Users\Administrator\Desktop\111 - 副本\ZStack-CC2530-r200\Components\hal\include
+D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Components\hal\include
 -I
-C:\Users\Administrator\Desktop\111 - 副本\ZStack-CC2530-r200\Components\hal\target\CC2530EB
+D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Components\hal\target\CC2530EB
 -I
-C:\Users\Administrator\Desktop\111 - 副本\ZStack-CC2530-r200\Components\mac\include
+D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Components\mac\include
 -I
-C:\Users\Administrator\Desktop\111 - 副本\ZStack-CC2530-r200\Components\mac\high_level
+D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Components\mac\high_level
 -I
-C:\Users\Administrator\Desktop\111 - 副本\ZStack-CC2530-r200\Components\mac\low_level\srf04
+D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Components\mac\low_level\srf04
 -I
-C:\Users\Administrator\Desktop\111 - 副本\ZStack-CC2530-r200\Components\mac\low_level\srf04\single_chip
+D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Components\mac\low_level\srf04\single_chip
 -I
-C:\Users\Administrator\Desktop\111 - 副本\ZStack-CC2530-r200\Components\mt
+D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Components\mt
 -I
-C:\Users\Administrator\Desktop\111 - 副本\ZStack-CC2530-r200\Components\osal\include
+D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Components\osal\include
 -I
-C:\Users\Administrator\Desktop\111 - 副本\ZStack-CC2530-r200\Components\services\saddr
+D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Components\services\saddr
 -I
-C:\Users\Administrator\Desktop\111 - 副本\ZStack-CC2530-r200\Components\services\sdata
+D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Components\services\sdata
 -I
-C:\Users\Administrator\Desktop\111 - 副本\ZStack-CC2530-r200\Components\stack\af
+D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Components\stack\af
 -I
-C:\Users\Administrator\Desktop\111 - 副本\ZStack-CC2530-r200\Components\stack\nwk
+D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Components\stack\nwk
 -I
-C:\Users\Administrator\Desktop\111 - 副本\ZStack-CC2530-r200\Components\stack\sapi
+D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Components\stack\sapi
 -I
-C:\Users\Administrator\Desktop\111 - 副本\ZStack-CC2530-r200\Components\stack\sec
+D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Components\stack\sec
 -I
-C:\Users\Administrator\Desktop\111 - 副本\ZStack-CC2530-r200\Components\stack\sys
+D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Components\stack\sys
 -I
-C:\Users\Administrator\Desktop\111 - 副本\ZStack-CC2530-r200\Components\stack\zdo
+D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Components\stack\zdo
 -I
-C:\Users\Administrator\Desktop\111 - 副本\ZStack-CC2530-r200\Components\zmac
+D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Components\zmac
 -I
-C:\Users\Administrator\Desktop\111 - 副本\ZStack-CC2530-r200\Components\zmac\f8w
+D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Components\zmac\f8w
 -D__CHAR_BITS__=8
 -D__CHAR_MAX__=0xff
 -D__CHAR_MIN__=0
