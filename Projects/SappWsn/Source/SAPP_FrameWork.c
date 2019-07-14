@@ -508,9 +508,9 @@ void RouterIncomingRoutine(struct ep_info_t *ep, uint16 addr, uint8 endPoint, af
 #endif
 
 #if defined(ZDO_COORDINATOR)
-void CoordinatorTimeoutRoutine(struct ep_info_t *ep){
-     SendData(ep->ep, (unsigned char *)&topoBuffer, 0x0000, TRANSFER_ENDPOINT, sizeof(TOPOINFO)); //节点向协调器发送拓扑信息
-}
+//void CoordinatorTimeoutRoutine(struct ep_info_t *ep){
+//     SendData(ep->ep, (unsigned char *)&topoBuffer, 0x0000, TRANSFER_ENDPOINT, sizeof(TOPOINFO)); //节点向协调器发送拓扑信息
+//}
 //协调器收到求救信息后向连接wifi的服务器发送信息
 void CoordinatorIncomingRoutine(struct ep_info_t *ep, uint16 addr, uint8 endPoint, afMSGCommandFormat_t *msg)
 {

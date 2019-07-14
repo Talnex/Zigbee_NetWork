@@ -126,7 +126,8 @@ extern void ModifyRefreshCycle(struct ep_info_t *ep, uint8 seconds);
 #if defined(ZDO_COORDINATOR)
 #define CoordinatorNwkStateChangeRoutine    NULL
 void CoordinatorIncomingRoutine(struct ep_info_t *ep, uint16 addr, uint8 endPoint, afMSGCommandFormat_t *msg);
-void CoordinatorTimeoutRoutine(struct ep_info_t *ep);
+//void CoordinatorTimeoutRoutine(struct ep_info_t *ep);
+#define CoordinatorTimeoutRoutine      NULL
 #define CoordinatorResAvailableRoutine      NULL
 #elif defined(RTR_NWK)
 #define RouterNwkStateChangeRoutine         NULL
