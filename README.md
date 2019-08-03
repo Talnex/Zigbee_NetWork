@@ -739,7 +739,7 @@ void MT_UartInit ()
 }
 ```
 
-我们的
+追踪这个回调函数发现这个是我自己写的回调函数，**自己添加新的回调函数时要在MT_UART.h里面声明**
 
 ``` c
 //自定义的串口接收回调函数
@@ -760,7 +760,7 @@ void MT_UartProcessZToolData1 ( uint8 port, uint8 event )
   {//分配内存，结构体+内容+长度
     pMsg = (mtOSALSerialData_t *)osal_msg_allocate( sizeof
                                                    ( mtOSALSerialData_t )+j+1);
-    pMsg->hdr.event = CMD_SERIAL_MSG;
+    pMsg->hdr.event = CMD_SERIAL_MSG;//事件类型选择为CMD_SERIAL_MSG
     pMsg->msg = (uint8*)(pMsg+1); //把数据定位到结构体
     pMsg->msg [0]= j;             //记录数据长度
     for(i=0;i<j;i++)
@@ -770,6 +770,120 @@ void MT_UartProcessZToolData1 ( uint8 port, uint8 event )
   }
 }
 
+//原本的回调函数，在后面讲zigbee调试助手原理的时候会讲到，暂时不用管
+void MT_UartProcessZToolData ( uint8 port, uint8 event )
+{
+    uint8  ch;
+    uint8  bytesInRxBuffer;
+
+    (void)event;  // Intentionally unreferenced parameter
+
+    while (Hal_UART_RxBufLen(port))
+    {
+        HalUARTRead (port, &ch, 1);
+
+        switch(state)
+        {
+    ...
+ }
+```
+
+注意串口事件也要在这里注册才行
+
+``` c
+void sapp_taskInitProcess(void)
+{
+   ...
+//这里选择是否注册串口事件
+#if defined(ZDO_COORDINATOR)// || defined(RTR_NWK)
+//    RegisterForKeys( SampleApp_TaskID );
+    MT_UartRegisterTaskID(controlTaskId);
+#endif
+}
+
+
+```
+
+这样我们回到sapp_controlEpProcess函数中，就可以对串口事件进行处理了，在这里路由器和协调器的处理函数是不同的
+
+``` c
+uint16 sapp_controlEpProcess(uint8 task_id, uint16 events)
+{
+    afIncomingMSGPacket_t *MSGpkt;
+
+    if ( events & SYS_EVENT_MSG )
+    {
+        //HalLedBlink( HAL_LED_1, 2, 50, 90 );
+        MSGpkt = (afIncomingMSGPacket_t *)osal_msg_receive(task_id);
+        while ( MSGpkt )
+        {
+            //HalUARTWrite(0, &MSGpkt->hdr.event,1);
+            switch ( MSGpkt->hdr.event )
+            {
+#if defined(ZDO_COORDINATOR)
+            case CMD_SERIAL_MSG:
+                uartMsgProcesser((uint8 *)MSGpkt);
+                HalLedBlink( HAL_LED_1, 2, 50, 90 );
+                break;
+#endif
+
+#if ! defined(ZDO_COORDINATOR) && defined(RTR_NWK)
+            case CMD_SERIAL_MSG:
+                uartMsgProcesser1((uint8 *)MSGpkt);
+                HalLedBlink( HAL_LED_1, 2, 50, 90 );
+                break;
+#endif
+```
+
+# Zigbee调试助手原理
+
+- 解析的思路
+
+1. 注意到在CMD_SERIAL_MSG事件中有让LED1闪两下的代码，实际现象中是当点击ZigBee调试助手的打开端口按钮时，LED1和LED2都闪，而且经过一段固定的时间后也会都闪，而控制LED1闪是在发送无线数据包出现的。
+
+``` c
+ case CMD_SERIAL_MSG:
+                uartMsgProcesser((uint8 *)MSGpkt);
+                HalLedBlink( HAL_LED_1, 2, 50, 90 );
+                break;
+```
+
+2. 注意到在这个case里还有一句uartMsgProcesser，追踪进去发现这个函数的功能是将受到的数据包进行解析，然后把数据包里的数据按照数据包里的地址发送出去，并且这个数据包里还有一个cmd和一个cmdEndPoint的帧控制域，只有当这两个控制域分别为0x0018和0xF1时才会触发发送数据包的函数，由此我们可以推测，PC通过串口发来了一串具有特定格式的数据包，协调器对数据包进行解析，然后把数据包里的数据发送到数据包里的目的地址。
+
+``` c
+static uint8 uartMsgProcesser(uint8 *msg)
+{
+    mtOSALSerialData_t *pMsg = (mtOSALSerialData_t *)msg;
+    mtUserSerialMsg_t *pMsgBody = (mtUserSerialMsg_t *)pMsg->msg;
+    if ( (curNwkState != DEV_ZB_COORD)
+            && (curNwkState != DEV_ROUTER)
+            && (curNwkState != DEV_END_DEVICE) )
+        return 1;
+    switch(pMsgBody->cmd)
+    {
+    case 0x0018:
+        {
+            switch(pMsgBody->cmdEndPoint)
+            {
+            case 0xF1:
+                {
+                    // 转发数据
+                    SendData(TRANSFER_ENDPOINT, pMsgBody->data,
+                             pMsgBody->addr, pMsgBody->endPoint,
+                             pMsgBody->len - 6);
+                }
+                break;
+            }
+        }
+        break;
+    }
+    return 1;
+
+```
+
+3. 那么这个数据包长什么样子呢，我们追踪到MT层中的串口回调函数，终于发现了官方对于这个数据包的格式定义，SOP(Start Of Packet我猜的)根据抓包的结果，发现一直是0x02，至于是什么含义在后面会讲到；我们继续看这个函数，发现他完成了对一个数据包的解析和FSC校验。
+
+``` c
 #if defined (ZTOOL_P1) || defined (ZTOOL_P2)
 /***************************************************************************************************
  * @fn      MT_UartProcessZToolData
@@ -795,21 +909,27 @@ void MT_UartProcessZToolData ( uint8 port, uint8 event )
 
     while (Hal_UART_RxBufLen(port))
     {
+        //读数据缓冲区
         HalUARTRead (port, &ch, 1);
-
+        //判断帧域类型
         switch(state)
         {
+        //如果是SOP控制域
         case SOP_STATE:
+            //如果是MT层的UART的SOP
             if(ch == MT_UART_SOF)
                 state = LEN_STATE;
             break;
+        //如果是长度控制域
         case LEN_STATE:
             if(ch < 7)
             {
-                // invalid length field
+                // 不合法的长度
                 state = SOP_STATE;
+                // 直接丢弃了
                 break;
             }
+            //合法后开始构建一个数据包
             pMsg = (mtOSALSerialData_t *)osal_msg_allocate(sizeof(mtOSALSerialData_t) +
                                                            ch + 3);//SOP+LEN+FSC
             tempDataLen = 0;
@@ -819,6 +939,7 @@ void MT_UartProcessZToolData ( uint8 port, uint8 event )
             if (pMsg)
             {
                 /* Fill up what we can */
+                //把能填的都填上，这里的事件类型CMD_SERIAL_MSG就是我们在处理函数里判断的事件类型
                 pMsg->hdr.event = CMD_SERIAL_MSG;
                 pMsg->msg = (uint8*)(pMsg + 1);
                 pMsgContent = (mtUserSerialMsg_t *)pMsg->msg;
@@ -833,12 +954,14 @@ void MT_UartProcessZToolData ( uint8 port, uint8 event )
                 return;
             }
             break;
+        //如果是数据域
         case DATA_STATE:
             pMsgContent->dataBody[tempDataLen++] = ch;
             /* Check number of bytes left in the Rx buffer */
             bytesInRxBuffer = Hal_UART_RxBufLen(port);
 
             /* If the remain of the data is there, read them all, otherwise, just read enough */
+            //读到数据域结束
             if (bytesInRxBuffer <= pMsgContent->len - tempDataLen)
             {
                 HalUARTRead (port, &pMsgContent->dataBody[tempDataLen], bytesInRxBuffer);
@@ -853,6 +976,7 @@ void MT_UartProcessZToolData ( uint8 port, uint8 event )
             if ( tempDataLen == pMsgContent->len )
                 state = FCS_STATE;
             break;
+        //进行帧校验    
         case FCS_STATE:
             /* Make sure it's correct */
             {
@@ -860,6 +984,7 @@ void MT_UartProcessZToolData ( uint8 port, uint8 event )
                 uint8 fcs = MT_UartCalcFCS(0, &pMsgContent->len, 1);
                 fcs = MT_UartCalcFCS(fcs, pMsgContent->dataBody, pMsgContent->len);
                 if(fcs == ch)
+                    //如果对了那就把数据包发送给应用层
                     osal_msg_send(App_TaskID, (byte *)pMsg);
                 else
                     osal_msg_deallocate((uint8 *)pMsg);
@@ -874,5 +999,62 @@ void MT_UartProcessZToolData ( uint8 port, uint8 event )
 }
 ```
 
+3. 这里也就解释里为什么我们要重写他的串口回调函数，因为我们在串口调试助手里发送的数据包在这个回调函数看来是不合法的都被丢弃了，而且也是因为我们不想做这么麻烦的数据包，不过坏处也是有的，就是由于没有帧校验位，导致很多数据包的内容都出错了，因此最好保留一位校验位，如果可以的话可以自己实现一个汉明码校验，这样就不用重发数据了。
 
+4. 接下来继续观察实验现象，发现zigbee调试助手打开后只有一个协调器节点，等待一会（大概十秒）后才突然出现子节点，同时接收LED灯闪烁，子节点的发送LED灯闪烁，这时整个流程就很清晰了：
 
+   > 1. zigbee调试助手周期性地发送一个特定格式的串口数据包给协调器
+   >
+   > 2. 协调器接收到后对数据包进行解析发送给应用层并触发CMD事件
+   >
+   > 3. 在CMD的事件处理函数中向广播地址(包括协调器)发送命令帧
+   >
+   > 4. 所有设备接收到命令帧后在处理函数里立即向协调器发送拓扑信息包
+   >
+   > 5. 协调器接收到拓扑信息包后将报文通过串口写给电脑
+   >
+   > 6. 电脑中的zigbee调试助手分析拓扑信息包中的节点父子关系绘制图像
+
+   下面我们验证一下整个流程。步骤123在上面已经介绍了。
+
+   
+
+5. 步骤5的实现源码在functionlist中协调器的接收到数据包的处理函数里：
+
+``` c
+void CoordinatorIncomingRoutine(struct ep_info_t *ep, uint16 addr, uint8 endPoint, afMSGCommandFormat_t *msg)
+{
+    if(msg->DataLength > 0)
+    {
+        mtUserSerialMsg_t *pMsg = osal_mem_alloc(sizeof(mtUserSerialMsg_t) + msg->DataLength - 1);
+      //在这里可以看到，为什么SOP一直是0x02，因为这里的MT_UART_SOP就是0x02，也就是串口事件规定的SOP
+        pMsg->sop = MT_UART_SOF;
+      //长度
+        pMsg->len = msg->DataLength + 6;
+      //命令位
+        pMsg->cmd = 0x0018;
+      //处理命令的endpoint
+        pMsg->cmdEndPoint = 0xF1;
+      //网络地址
+        pMsg->addr = addr;
+      //endpoint
+        pMsg->endPoint = endPoint;
+      //数据区
+        memcpy(pMsg->data, msg->Data, msg->DataLength);
+      //帧校验
+        pMsg->fsc = MT_UartCalcFCS(0, &pMsg->len, 1);
+        pMsg->fsc = MT_UartCalcFCS(pMsg->fsc, pMsg->dataBody, pMsg->len);
+      //将整个数据包通过串口写给电脑
+        HalUARTWrite(HAL_UART_PORT_0, &pMsg->sop, sizeof(mtUserSerialMsg_t) - 2 + msg->DataLength);
+        HalUARTWrite(HAL_UART_PORT_0, &pMsg->fsc, 1);
+      //不释放会死机
+        osal_mem_free(pMsg);
+    }
+}
+```
+
+6. 通过并联一个USB转TTL的小工具，连接传感器安装孔中的P0.2(TXD)，和P0.3(RXD)截获了协调器向PC发送的数据包：
+
+![8140B9E5AF57E26EABFCF009A1ED32E3.png](https://i.loli.net/2019/07/23/5d370fb5032e976001.png)
+
+可以看到最后一行是一个终端节点发送的一个数据，数据的内容是字符串"Z-Stack for SAPP"，他在zigbee调试助手中
