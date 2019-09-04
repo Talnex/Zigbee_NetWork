@@ -1,10 +1,10 @@
-"C:\Program Files\IAR Systems\Embedded Workbench 8.0\8051\bin\8051proc.dll" 
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\8051\bin\8051proc.dll" 
 
-"C:\Program Files\IAR Systems\Embedded Workbench 8.0\8051\bin\8051emu_cc.dll" 
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\8051\bin\8051emu_cc.dll" 
 
-"D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Projects\SappWsn\RouterEB\Exe\SappWsn.d51" 
+"\\Mac\Home\Documents\GitHub\Kraken\Zigbee_NetWork\Projects\SappWsn\RouterEB\Exe\SappWsn.d51" 
 
---plugin "C:\Program Files\IAR Systems\Embedded Workbench 8.0\8051\bin\8051bat.dll" 
+--plugin "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\8051\bin\8051bat.dll" 
 
 
 

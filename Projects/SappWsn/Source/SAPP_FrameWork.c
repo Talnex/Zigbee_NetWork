@@ -1,5 +1,6 @@
 #if defined(SAPP_ZSTACK)
 #include "SAPP_FrameWork.h"
+#include "DealStringInfo.h"
 #include <string.h>
 
 /*********************************************************************
@@ -23,6 +24,50 @@ static uint8 controlTaskId;
 static uint8 functionTaskId;
 static struct ep_info_t controlEndPointInfo;
 static uint8 isUserTimerRunning = 0;
+
+static void UartTX_Send_String(char *Data,int len)
+{
+  int j;
+  for(j=0;j<len;j++)
+  {
+    U0DBUF = *Data++;  //USART 0 Receive/Transmit Data Buffer  
+    while(UTX0IF == 0);//中断标志 == 0 
+    UTX0IF = 0;
+  }
+}
+
+void delayms(unsigned char ms)  //设置一个大于1ms的延时
+{
+  char k = 63;
+  char l = 16;
+  while(ms--)
+    while (k--)
+      while(l--);
+}
+
+void Cfg32M()
+{
+    SLEEPCMD &=0xFB; //fB 0 00 让2个时钟源都起振
+    while(0==(SLEEPSTA & 0x40));  //  0100 0000  如果32M 晶振供电且稳定了，那么程序往下运行
+    CLKCONCMD &=0xF8; //1111 1000 不分频输出
+
+    CLKCONCMD &=0xBF;//1011 1111 让32M作为系统主时钟供给CPU
+    while(1==(CLKCONSTA & 0x40));//如果32M确实供给CPU在工作，那么程序往下执行
+    SLEEPCMD |=0x40;// 0000 0100 
+}
+
+void UartCfg()
+{//串口0的备用位置1配置成波特率9600
+   PERCFG &=0xFE;//1111 1110 选中串口0的的备用位置1
+   P0SEL  |=0x0C;       //0000 1100 P0_2 p0_3为偏上外设功能
+   
+   U0CSR |=0Xc0;
+   
+   U0GCR =8;
+   U0BAUD=59;
+   EA=1;
+   URX0IE=1;
+}
 
 void sapp_taskInitProcess(void)
 {
@@ -70,6 +115,12 @@ void sapp_taskInitProcess(void)
 //    RegisterForKeys( SampleApp_TaskID );
     MT_UartRegisterTaskID(controlTaskId);
 //#endif
+    
+    UartTX_Send_String("AT+CIPMUX=1\r\n",13);
+    delayms(100);
+    UartTX_Send_String("AT+CIPSERVER=1,8080\r\n",21);
+    delayms(100);
+    
 }
 /*********************************************************************
  * LOCAL FUNCTIONS
@@ -389,38 +440,66 @@ uint16 sapp_functionEpProcess(uint8 task_id, uint16 events)
     // Discard unknown events
     return 0;
 }
-//处理接收到的wifi模块串口数据
+
+//luyou处理接收到的wifi模块串口数据
 static uint8 uartMsgProcesser1(uint8 *msg)
 {
-  /*
-    uint8 length = 0;
+    //uint8 length = 0;
+    //uint8 offset = 60;
     mtOSALSerialData_t *pMsg = (mtOSALSerialData_t *)msg;
     mtUserSerialMsg_t *pMsgBody = (mtUserSerialMsg_t *)pMsg->msg;
-    if ( (curNwkState != DEV_ZB_COORD)
-            && (curNwkState != DEV_ROUTER)
-            && (curNwkState != DEV_END_DEVICE) )
-        return 1;
+    uint8 i = 0;
+    for(i;i<30;i++){
+      if((&pMsgBody->sop)[i] == '+'){
+        if((&pMsgBody->sop)[i+4] != ',') {
+          //HalUARTWrite(0,&pMsgBody->sop+i+4,1);
+          return 1;
+        }else{
+          uint8 length = 0;
+          for(length;length<60;length++){
+            if((&pMsgBody->sop)[5+i+length] == ','){
+              //HalUARTWrite(0,"out",3);
+              SendData(TRANSFER_ENDPOINT,&pMsgBody->sop+i+5,0x0000,1,length+1);
+              return 1;
+            }else{
+              //HalUARTWrite(0,&pMsgBody->sop+i+5+length,1);
+            }
+          }
+         }
+      }
+    }
     
-    while((&pMsgBody->sop)[length++]!='\n'&&length<pMsgBody->len);
-    HalUARTWrite(0,&pMsgBody->sop,length);
-    HalLedBlink( HAL_LED_1, 3, 50, 90 );
-*/
-    uint8 length = 0;
-    mtOSALSerialData_t *pMsg = (mtOSALSerialData_t *)msg;
-    mtUserSerialMsg_t *pMsgBody = (mtUserSerialMsg_t *)pMsg->msg;
-    while((&pMsgBody->sop)[length++]!='\n'&&length<pMsgBody->len);
-    SendData(TRANSFER_ENDPOINT,&pMsgBody->sop,0x0000, 1,length);
     return 1;
 }
 
 #if defined(ZDO_COORDINATOR)
 static uint8 uartMsgProcesser(uint8 *msg)
 {
-    uint8 length = 0;
+   //uint8 length = 0;
+    //uint8 offset = 60;
     mtOSALSerialData_t *pMsg = (mtOSALSerialData_t *)msg;
     mtUserSerialMsg_t *pMsgBody = (mtUserSerialMsg_t *)pMsg->msg;
-    while((&pMsgBody->sop)[length++]!='\n'&&length<pMsgBody->len);
-    SendData(TRANSFER_ENDPOINT,&pMsgBody->sop,0xFFFF, 1,length);
+    uint8 i = 0;
+    for(i;i<30;i++){
+      if((&pMsgBody->sop)[i] == '+'){
+        if((&pMsgBody->sop)[i+4] != ',') {
+          //HalUARTWrite(0,&pMsgBody->sop+i+4,1);
+          return 1;
+        }else{
+          uint8 length = 0;
+          for(length;length<60;length++){
+            if((&pMsgBody->sop)[5+i+length] == ','){
+              //HalUARTWrite(0,"out",3);
+              SendData(TRANSFER_ENDPOINT,&pMsgBody->sop+i+5,0xFFFF,1,length+1);
+              return 1;
+            }else{
+              //HalUARTWrite(0,&pMsgBody->sop+i+5+length,1);
+            }
+          }
+         }
+      }
+    }
+    
     return 1;
 }
 #endif
@@ -496,47 +575,67 @@ void ModifyRefreshCycle(struct ep_info_t *ep, uint8 seconds)
 //路由器定时发送拓扑信息
 void RouterTimeoutRoutine(struct ep_info_t *ep)
 {
-    SendData(ep->ep, (unsigned char *)&topoBuffer, 0x0000, TRANSFER_ENDPOINT, sizeof(TOPOINFO)); //节点向协调器发送拓扑信息
+    //HalUARTWrite(0,"AT+CWLIF\r\n",10);
+    //SendData(ep->ep, (unsigned char *)&topoBuffer, 0x0000, TRANSFER_ENDPOINT, sizeof(TOPOINFO)); //节点向协调器发送拓扑信息
 }
 //路由器收到广播后向所有连接wifi的设备广播信息
 void RouterIncomingRoutine(struct ep_info_t *ep, uint16 addr, uint8 endPoint, afMSGCommandFormat_t *msg){
-    HalUARTWrite(0,msg->Data,msg->DataLength);
-    HalLedBlink( HAL_LED_2, 3, 50, 90 );
-     //Delay_ms(5);
+  
+   UartTX_Send_String("AT+CIPSTART=0,\"TCP\",\"192.168.4.2\",5000\r\n",40);
+   delayms(100);
+   char srcchar1[100] = "AT+CIPSEND=0,";
+   char * tempchar1 = (char *)osal_mem_alloc(sizeof(char)*50);
+   sprintf(tempchar1,"%d",msg->DataLength+2);
+   strcat(srcchar1,tempchar1);
+   strcat(srcchar1,"\r\n");
+   UartTX_Send_String(srcchar1,strlen(srcchar1));
+   delayms(100);
+   UartTX_Send_String(msg->Data,msg->DataLength);
+   UartTX_Send_String("\r\n",2);
+   delayms(100);
 
+   UartTX_Send_String("AT+CIPSTART=0,\"TCP\",\"192.168.4.3\",5000\r\n",40);
+   delayms(100);
+   UartTX_Send_String(srcchar1,strlen(srcchar1));
+   delayms(100);
+   UartTX_Send_String(msg->Data,msg->DataLength);
+   UartTX_Send_String("\r\n",2);
+   delayms(100);
+   
 }
 #endif
 
 #if defined(ZDO_COORDINATOR)
 //void CoordinatorTimeoutRoutine(struct ep_info_t *ep){
-//     SendData(ep->ep, (unsigned char *)&topoBuffer, 0x0000, TRANSFER_ENDPOINT, sizeof(TOPOINFO)); //节点向协调器发送拓扑信息
+    //SendData(ep->ep, (unsigned char *)&topoBuffer, 0x0000, TRANSFER_ENDPOINT, sizeof(TOPOINFO)); //节点向协调器发送拓扑信息
+   //UartTX_Send_String("AT\r\n",4);
 //}
 //协调器收到求救信息后向连接wifi的服务器发送信息
 void CoordinatorIncomingRoutine(struct ep_info_t *ep, uint16 addr, uint8 endPoint, afMSGCommandFormat_t *msg)
-{
-    //msg->Data[], msg->DataLength, msg->TransSeqNumber
-    // 转发数据到串口
-  /*
-    if(msg->DataLength > 0)
-    {
-        mtUserSerialMsg_t *pMsg = osal_mem_alloc(sizeof(mtUserSerialMsg_t) + msg->DataLength - 1);
-        pMsg->sop = MT_UART_SOF;
-        pMsg->len = msg->DataLength + 6;
-        pMsg->cmd = 0x0018;
-        pMsg->cmdEndPoint = 0xF1;
-        pMsg->addr = addr;
-        pMsg->endPoint = endPoint;
-        memcpy(pMsg->data, msg->Data, msg->DataLength);
-        pMsg->fsc = MT_UartCalcFCS(0, &pMsg->len, 1);
-        pMsg->fsc = MT_UartCalcFCS(pMsg->fsc, pMsg->dataBody, pMsg->len);
-        HalUARTWrite(HAL_UART_PORT_0, &pMsg->sop, sizeof(mtUserSerialMsg_t) - 2 + msg->DataLength);
-        HalUARTWrite(HAL_UART_PORT_0, &pMsg->fsc, 1);
-        osal_mem_free(pMsg);
-    }
-*/
-    HalUARTWrite(0,msg->Data,msg->DataLength);
-    HalLedBlink( HAL_LED_2, 2, 50, 90 );
+{ 
   
+   UartTX_Send_String("AT+CIPSTART=0,\"TCP\",\"192.168.4.2\",5000\r\n",40);
+   delayms(100);
+   char srcchar[100] = "AT+CIPSEND=0,";
+   char * tempchar = (char *)osal_mem_alloc(sizeof(char)*50);
+   sprintf(tempchar,"%d",msg->DataLength+2);
+   strcat(srcchar,tempchar);
+   strcat(srcchar,"\r\n");
+   UartTX_Send_String(srcchar,strlen(srcchar));
+   delayms(100);
+   UartTX_Send_String(msg->Data,msg->DataLength);
+   UartTX_Send_String("\r\n",2);
+   delayms(100);
+ 
+   UartTX_Send_String("AT+CIPSTART=0,\"TCP\",\"192.168.4.3\",5000\r\n",40);
+   delayms(100);
+   UartTX_Send_String(srcchar,strlen(srcchar));
+   delayms(100);
+   UartTX_Send_String(msg->Data,msg->DataLength);
+   UartTX_Send_String("\r\n",2);
+   delayms(100);
+  
+   HalLedBlink(HAL_LED_2, 1, 50, 90 );
 }
 #endif
 #endif//SAPP_ZSTACK

@@ -25,7 +25,7 @@ if not "%~1" == "" goto debugFile
 
 @echo on 
 
-"C:\Program Files\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Projects\SappWsn\settings\SappWsn.RouterEB.general.xcl" --backend -f "D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Projects\SappWsn\settings\SappWsn.RouterEB.driver.xcl" 
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "\\Mac\Home\Documents\GitHub\Kraken\Zigbee_NetWork\Projects\SappWsn\settings\SappWsn.RouterEB.general.xcl" --backend -f "\\Mac\Home\Documents\GitHub\Kraken\Zigbee_NetWork\Projects\SappWsn\settings\SappWsn.RouterEB.driver.xcl" 
 
 @echo off 
 goto end 
@@ -34,7 +34,7 @@ goto end
 
 @echo on 
 
-"C:\Program Files\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Projects\SappWsn\settings\SappWsn.RouterEB.general.xcl" "--debug_file=%~1" --backend -f "D:\课设勿动\ZStack-CC2530-r200\Zigbee_NetWork\Projects\SappWsn\settings\SappWsn.RouterEB.driver.xcl" 
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "\\Mac\Home\Documents\GitHub\Kraken\Zigbee_NetWork\Projects\SappWsn\settings\SappWsn.RouterEB.general.xcl" "--debug_file=%~1" --backend -f "\\Mac\Home\Documents\GitHub\Kraken\Zigbee_NetWork\Projects\SappWsn\settings\SappWsn.RouterEB.driver.xcl" 
 
 @echo off 
 :end
